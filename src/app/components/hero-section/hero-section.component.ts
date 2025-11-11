@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
+import { SimpleTranslateService } from '../../services/simple-translate.service';
 import { PersonalInfo } from '../../models/portfolio.model';
-import { TranslateService } from '@ngx-translate/core';
 import { gsap } from 'gsap';
 
 @Component({
@@ -15,7 +15,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
   constructor(
     private portfolioService: PortfolioService,
-    private translate: TranslateService
+    private translate: SimpleTranslateService
   ) {}
 
   ngOnInit(): void {
@@ -29,6 +29,11 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.animateHeroContent();
+  }
+
+  // Translation helper method
+  t(key: string): string {
+    return this.translate.instant(key);
   }
 
   private animateHeroContent(): void {

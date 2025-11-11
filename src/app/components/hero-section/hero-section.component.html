@@ -20,14 +20,14 @@
       </div>
 
       <div class="hero-text">
-        <h1 class="hero-name">{{ 'hero.name' | translate }}</h1>
-        <p class="hero-tagline">{{ 'hero.tagline' | translate }}</p>
-        <p class="hero-description">{{ 'hero.description' | translate }}</p>
+        <h1 class="hero-name">{{ t('hero.name') }}</h1>
+        <p class="hero-tagline">{{ t('hero.tagline') }}</p>
+        <p class="hero-description">{{ t('hero.description') }}</p>
       </div>
     </div>
 
     <div class="scroll-indicator" (click)="scrollToSection('skills')">
-      <span class="scroll-text">{{ 'hero.scrollDown' | translate }}</span>
+      <span class="scroll-text">{{ t('hero.scrollDown') }}</span>
       <mat-icon class="scroll-icon">keyboard_arrow_down</mat-icon>
     </div>
   </div>

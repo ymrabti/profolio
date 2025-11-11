@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
+import { SimpleTranslateService } from '../../services/simple-translate.service';
 import { Project } from '../../models/portfolio.model';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -17,7 +18,10 @@ export class ProjectsSectionComponent implements OnInit, AfterViewInit {
   selectedCategory = 'fullstack';
   expandedProjects = new Set<string>();
 
-  constructor(private portfolioService: PortfolioService) {}
+  constructor(
+    private portfolioService: PortfolioService,
+    private translate: SimpleTranslateService
+  ) {}
 
   ngOnInit(): void {
     this.loadProjects();
@@ -25,6 +29,11 @@ export class ProjectsSectionComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.setupAnimations();
+  }
+
+  // Translation helper method
+  t(key: string): string {
+    return this.translate.instant(key);
   }
 
   private loadProjects(): void {

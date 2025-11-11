@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
+import { SimpleTranslateService } from '../../services/simple-translate.service';
 import { Skill } from '../../models/portfolio.model';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -16,7 +17,10 @@ export class SkillsSectionComponent implements OnInit, AfterViewInit {
   skillsGrouped: { [key: string]: Skill[] } = {};
   selectedCategory = 'dev';
 
-  constructor(private portfolioService: PortfolioService) {}
+  constructor(
+    private portfolioService: PortfolioService,
+    private translate: SimpleTranslateService
+  ) {}
 
   ngOnInit(): void {
     this.loadSkills();
@@ -24,6 +28,11 @@ export class SkillsSectionComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.setupAnimations();
+  }
+
+  // Translation helper method
+  t(key: string): string {
+    return this.translate.instant(key);
   }
 
   private loadSkills(): void {
