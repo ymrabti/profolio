@@ -48,11 +48,22 @@
         "responsibilities": "Key Responsibilities"
     },
     "contact": {
-        "title": "Let's Connect!",
-        "subtitle": "Find me on these platforms",
+        "title": "Let's Connect & Work Together!",
+        "subtitle": "Ready to bring your ideas to life? Get in touch!",
         "github": "GitHub Repositories",
         "linkedin": "Professional Network",
-        "patreon": "Support My Work"
+        "patreon": "Support My Work",
+        "hire": {
+            "title": "Ready to Work Together?",
+            "description": "Let's discuss your next project and bring your ideas to life.",
+            "buttonHire": "Hire Me",
+            "buttonCV": "Download CV"
+        },
+        "info": {
+            "location": "Available for Remote & On-site Work",
+            "response": "Usually responds within 24 hours",
+            "availability": "Open for Freelance & Full-time Opportunities"
+        }
     },
     "common": {
         "readMore": "Read More",

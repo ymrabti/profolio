@@ -19,6 +19,7 @@ import { SkillsSectionComponent } from './components/skills-section/skills-secti
 import { ProjectsSectionComponent } from './components/projects-section/projects-section.component';
 import { ExperienceSectionComponent } from './components/experience-section/experience-section.component';
 import { FooterSectionComponent } from './components/footer-section/footer-section.component';
+import { ContactMeComponent } from './components/contact-me/contact-me.component';
 
 // Custom loader that loads from assets
 export class CustomTranslateLoader implements TranslateLoader {
@@ -42,6 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProjectsSectionComponent,
     ExperienceSectionComponent,
     FooterSectionComponent,
+    ContactMeComponent,
   ],
   imports: [
     BrowserModule,

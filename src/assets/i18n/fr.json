@@ -48,11 +48,22 @@
         "responsibilities": "Responsabilités clés"
     },
     "contact": {
-        "title": "Restons connectés",
-        "subtitle": "Retrouvez-moi sur ces plateformes",
+        "title": "Restons connectés et travaillons ensemble!",
+        "subtitle": "Prêt à donner vie à vos idées? Contactez-moi!",
         "github": "Dépôts GitHub",
         "linkedin": "Réseau professionnel",
-        "patreon": "Soutenez mon travail"
+        "patreon": "Soutenez mon travail",
+        "hire": {
+            "title": "Prêt à travailler ensemble?",
+            "description": "Discutons de votre prochain projet et donnons vie à vos idées.",
+            "buttonHire": "Engagez-moi",
+            "buttonCV": "Télécharger CV"
+        },
+        "info": {
+            "location": "Disponible pour du travail à distance et sur site",
+            "response": "Répond généralement dans les 24 heures",
+            "availability": "Ouvert aux opportunités freelance et temps plein"
+        }
     },
     "common": {
         "readMore": "Lire la suite",

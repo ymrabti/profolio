@@ -1,0 +1,84 @@
+<!-- Contact Me Section -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">{{ translate.instant('contact.title') }}</h2>
+            <p class="section-subtitle">{{ translate.instant('contact.subtitle') }}</p>
+        </div>
+
+        <div class="contact-content">
+            <!-- Hire Me CTA -->
+            <div class="hire-me-card">
+                <h3>{{ translate.instant('contact.hire.title') }}</h3>
+                <p>{{ translate.instant('contact.hire.description') }}</p>
+                <div class="cta-buttons">
+                    <button mat-raised-button color="primary" (click)="openEmailClient()" class="cta-btn">
+                        <mat-icon>email</mat-icon>
+                        {{ translate.instant('contact.hire.buttonHire') }}
+                    </button>
+                    <button mat-raised-button (click)="downloadCV()" class="cta-btn secondary">
+                        <mat-icon>file_download</mat-icon>
+                        {{ translate.instant('contact.hire.buttonCV') }}
+                    </button>
+                </div>
+            </div>
+
+            <!-- Contact Methods -->
+            <div class="contact-methods">
+                <div class="contact-grid">
+                    <!-- Email -->
+                    <div class="contact-item" (click)="openEmailClient()">
+                        <div class="contact-icon">
+                            <mat-icon>email</mat-icon>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>{{emailAddress}}</p>
+                            <span class="contact-action">Send Message</span>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="contact-item" (click)="openLinkedIn()">
+                        <div class="contact-icon linkedin">
+                            <mat-icon>business</mat-icon>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p>Professional Network</p>
+                            <span class="contact-action">Connect</span>
+                        </div>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="contact-item" (click)="openGitHub()">
+                        <div class="contact-icon github">
+                            <mat-icon>code</mat-icon>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <p>Code Repositories</p>
+                            <span class="contact-action">View Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Info -->
+            <div class="quick-info">
+                <div class="info-item">
+                    <mat-icon>location_on</mat-icon>
+                    <span>{{ translate.instant('contact.info.location') }}</span>
+                </div>
+                <div class="info-item">
+                    <mat-icon>schedule</mat-icon>
+                    <span>{{ translate.instant('contact.info.response') }}</span>
+                </div>
+                <div class="info-item">
+                    <mat-icon>work</mat-icon>
+                    <span>{{ translate.instant('contact.info.availability') }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
