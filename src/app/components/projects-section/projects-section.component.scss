@@ -224,7 +224,7 @@
             &.github-btn {
               background: #24292e;
               color: white;
-              
+
               &:hover {
                 background: #1a1e22;
                 transform: translateY(-2px);
@@ -234,7 +234,7 @@
             &.live-btn {
               background: linear-gradient(45deg, #667eea, #764ba2);
               color: white;
-              
+
               &:hover {
                 transform: translateY(-2px);
                 box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
@@ -244,7 +244,7 @@
             &.play-btn {
               background: #01875f;
               color: white;
-              
+
               &:hover {
                 background: #016b4a;
                 transform: translateY(-2px);
@@ -254,7 +254,7 @@
             &.app-btn {
               background: #007aff;
               color: white;
-              
+
               &:hover {
                 background: #0056cc;
                 transform: translateY(-2px);
@@ -356,7 +356,7 @@
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(20px);
   }
   to {
@@ -377,9 +377,10 @@
 }
 
 @keyframes slideRight {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(-100px);
-    opacity: 0;
+    opacity: 1;
   }
   50% {
     transform: translateX(0);
@@ -388,9 +389,10 @@
 }
 
 @keyframes slideLeft {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(100px);
-    opacity: 0;
+    opacity: 1;
   }
   50% {
     transform: translateX(0);

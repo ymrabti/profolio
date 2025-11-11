@@ -89,7 +89,7 @@ a {
 
 @keyframes fadeInUp {
   from {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(30px);
   }
   to {
@@ -100,7 +100,7 @@ a {
 
 @keyframes fadeInLeft {
   from {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(-30px);
   }
   to {
@@ -111,7 +111,7 @@ a {
 
 @keyframes fadeInRight {
   from {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(30px);
   }
   to {

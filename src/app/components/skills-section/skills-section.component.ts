@@ -46,7 +46,7 @@ export class SkillsSectionComponent implements OnInit, AfterViewInit {
   private setupAnimations(): void {
     gsap.from('.skills-header', {
       y: 50,
-      opacity: 0,
+      opacity: 1,
       duration: 1,
       ease: 'power2.out',
       scrollTrigger: {
@@ -57,7 +57,7 @@ export class SkillsSectionComponent implements OnInit, AfterViewInit {
 
     gsap.from('.category-tabs .tab', {
       y: 30,
-      opacity: 0,
+      opacity: 1,
       duration: 0.6,
       stagger: 0.1,
       ease: 'power2.out',
@@ -73,7 +73,7 @@ export class SkillsSectionComponent implements OnInit, AfterViewInit {
   private animateSkillBars(): void {
     gsap.from('.skill-item', {
       x: -50,
-      opacity: 0,
+      opacity: 1,
       duration: 0.8,
       stagger: 0.1,
       ease: 'power2.out',

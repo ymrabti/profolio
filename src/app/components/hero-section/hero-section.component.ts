@@ -19,9 +19,6 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    this.translate.setDefaultLang(this.currentLanguage);
-    this.translate.use(this.currentLanguage);
-    
     this.portfolioService.getPersonalInfo().subscribe(info => {
       this.personalInfo = info;
     });
@@ -47,25 +44,25 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     })
     .from('.hero-name', {
       y: 50,
-      opacity: 0,
+      opacity: 1,
       duration: 0.8,
       ease: 'power2.out'
     }, '-=0.6')
     .from('.hero-tagline', {
       y: 30,
-      opacity: 0,
+      opacity: 1,
       duration: 0.8,
       ease: 'power2.out'
     }, '-=0.4')
     .from('.hero-description', {
       y: 30,
-      opacity: 0,
+      opacity: 1,
       duration: 0.8,
       ease: 'power2.out'
     }, '-=0.4')
     .from('.scroll-indicator', {
       y: 20,
-      opacity: 0,
+      opacity: 1,
       duration: 0.6,
       ease: 'power2.out'
     }, '-=0.2');

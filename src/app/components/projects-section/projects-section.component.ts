@@ -47,7 +47,7 @@ export class ProjectsSectionComponent implements OnInit, AfterViewInit {
   private setupAnimations(): void {
     gsap.from('.projects-header', {
       y: 50,
-      opacity: 0,
+      opacity: 1,
       duration: 1,
       ease: 'power2.out',
       scrollTrigger: {
@@ -58,7 +58,7 @@ export class ProjectsSectionComponent implements OnInit, AfterViewInit {
 
     gsap.from('.project-tabs .tab', {
       y: 30,
-      opacity: 0,
+      opacity: 1,
       duration: 0.6,
       stagger: 0.1,
       ease: 'power2.out',
@@ -74,7 +74,7 @@ export class ProjectsSectionComponent implements OnInit, AfterViewInit {
   private animateProjectCards(): void {
     gsap.from('.project-card', {
       y: 50,
-      opacity: 0,
+      opacity: 1,
       duration: 0.8,
       stagger: 0.2,
       ease: 'power2.out',
