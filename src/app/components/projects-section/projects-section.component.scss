@@ -72,8 +72,9 @@
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 2rem;
+    align-items: start; // This fixes uneven heights
 
     .project-card {
       background: rgba(255, 255, 255, 0.05);
@@ -83,6 +84,9 @@
       padding: 2rem;
       transition: all 0.4s ease;
       overflow: hidden;
+      height: fit-content; // Allow natural height
+      display: flex;
+      flex-direction: column;
 
       &:hover {
         transform: translateY(-5px);
@@ -147,10 +151,12 @@
         line-height: 1.6;
         color: #e2e8f0;
         margin-bottom: 1.5rem;
+        flex: 1; // Take available space
       }
 
       .project-content {
         animation: fadeIn 0.3s ease-in-out;
+        flex: 1; // Take available space
 
         .features-section {
           margin-bottom: 2rem;
@@ -271,6 +277,8 @@
       }
 
       .project-footer {
+        margin-top: auto; // Push to bottom
+
         .view-more-btn {
           color: #667eea;
           font-weight: 600;
@@ -356,7 +364,7 @@
 
 @keyframes fadeIn {
   from {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(20px);
   }
   to {
@@ -380,7 +388,7 @@
   0%,
   100% {
     transform: translateX(-100px);
-    opacity: 1;
+    opacity: 0;
   }
   50% {
     transform: translateX(0);
@@ -392,7 +400,7 @@
   0%,
   100% {
     transform: translateX(100px);
-    opacity: 1;
+    opacity: 0;
   }
   50% {
     transform: translateX(0);
@@ -401,6 +409,15 @@
 }
 
 // Responsive design
+@media (max-width: 1024px) {
+  .projects-section {
+    .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.8rem;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .projects-section {
     padding: 4rem 0;
@@ -434,14 +451,20 @@
 
       .project-card {
         padding: 1.5rem;
+        min-height: auto; // Reset height for mobile
 
         .project-header {
           flex-direction: column;
           align-items: flex-start;
           gap: 1rem;
 
+          .project-title-section {
+            width: 100%;
+          }
+
           .expand-button {
             align-self: flex-end;
+            margin-top: -2rem; // Overlap with title section
           }
         }
 

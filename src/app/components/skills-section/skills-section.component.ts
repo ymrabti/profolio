@@ -108,14 +108,14 @@ export class SkillsSectionComponent implements OnInit, AfterViewInit {
 
   getSkillIcon(skill: Skill): string {
     const iconMap: { [key: string]: string } = {
-      'flutter': 'flutter_dash',
+      'flutter': 'apps',
       'javascript': 'code',
-      'angular': 'angular',
+      'angular': 'web',
       'dotnet': 'code',
-      'java': 'coffee',
+      'java': 'code',
       'android': 'android',
       'swift': 'phone_iphone',
-      'docker': 'container',
+      'docker': 'dns',
       'cloudflare': 'cloud',
       'code': 'code',
       'postgresql': 'storage',

@@ -45,44 +45,62 @@ export class ProjectsSectionComponent implements OnInit, AfterViewInit {
   }
 
   private setupAnimations(): void {
-    gsap.from('.projects-header', {
-      y: 50,
-      opacity: 1,
-      duration: 1,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '.projects-section',
-        start: 'top 80%'
+    gsap.fromTo('.projects-header', 
+      {
+        y: 50,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.projects-section',
+          start: 'top 80%'
+        }
       }
-    });
+    );
 
-    gsap.from('.project-tabs .tab', {
-      y: 30,
-      opacity: 1,
-      duration: 0.6,
-      stagger: 0.1,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '.project-tabs',
-        start: 'top 85%'
+    gsap.fromTo('.project-tabs .tab', 
+      {
+        y: 30,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.project-tabs',
+          start: 'top 85%'
+        }
       }
-    });
+    );
 
     this.animateProjectCards();
   }
 
   private animateProjectCards(): void {
-    gsap.from('.project-card', {
-      y: 50,
-      opacity: 1,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '.projects-grid',
-        start: 'top 85%'
+    gsap.fromTo('.project-card', 
+      {
+        y: 50,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.projects-grid',
+          start: 'top 85%'
+        }
       }
-    });
+    );
   }
 
   selectCategory(category: string): void {
