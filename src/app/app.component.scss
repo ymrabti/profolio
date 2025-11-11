@@ -7,6 +7,29 @@
   }
 }
 
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 25px;
+  padding: 5px;
+  backdrop-filter: blur(10px);
+  
+  .lang-btn {
+    min-width: 40px;
+    color: white;
+    font-weight: 500;
+    margin: 0 2px;
+    border-radius: 20px;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
 // Global animations for scroll-triggered elements
 :host {
   ::ng-deep {

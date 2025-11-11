@@ -1,4 +1,10 @@
 <main class="app-container">
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <button mat-button (click)="switchLanguage('en')" class="lang-btn">EN</button>
+    <button mat-button (click)="switchLanguage('fr')" class="lang-btn">FR</button>
+  </div>
+  
   <pro-hero-section></pro-hero-section>
   <pro-skills-section></pro-skills-section>
   <pro-projects-section></pro-projects-section>

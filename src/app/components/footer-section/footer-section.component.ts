@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
-import { SimpleTranslateService } from '../../services/simple-translate.service';
+import { TranslateService } from '@ngx-translate/core';
 import { ExternalLink } from '../../models/portfolio.model';
 
 @Component({
@@ -14,18 +14,13 @@ export class FooterSectionComponent implements OnInit {
 
   constructor(
     private portfolioService: PortfolioService,
-    private translate: SimpleTranslateService
+    private translate: TranslateService
   ) {}
 
   ngOnInit(): void {
     this.portfolioService.getExternalLinks().subscribe(links => {
       this.externalLinks = links;
     });
-  }
-
-  // Translation helper method
-  t(key: string): string {
-    return this.translate.instant(key);
   }
 
   scrollToTop(): void {

@@ -1,8 +1,8 @@
 <section id="experience" class="experience-section">
   <div class="container">
     <div class="experience-header">
-      <h2 class="section-title">{{ t('experience.title') }}</h2>
-      <p class="section-subtitle">{{ t('experience.subtitle') }}</p>
+      <h2 class="section-title">{{ 'experience.title' | translate }}</h2>
+      <p class="section-subtitle">{{ 'experience.subtitle' | translate }}</p>
     </div>
 
     <div class="timeline">
@@ -14,7 +14,7 @@
             <h3 class="company-name">{{ contribution.company }}</h3>
             <span class="period">{{ contribution.period }}</span>
             <span class="current-badge" *ngIf="contribution.period.includes('Present')">
-              {{ t('experience.current') }}
+              {{ 'experience.current' | translate }}
             </span>
           </div>
           

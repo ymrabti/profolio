@@ -12,7 +12,7 @@ export class PortfolioService {
       name: 'Younes MRABTI',
       tagline: 'Serving the code community',
       description: 'Full Stack Developer & GIS Specialist with expertise in modern web technologies, mobile development, and geospatial solutions. Passionate about creating innovative platforms and contributing to the developer community.',
-      avatarUrl: '/assets/images/younes-avatar.jpg',
+      avatarUrl: '/assets/images/avatar.jpg',
       location: 'Morocco',
       email: 'younes.mrabti@example.com'
     },
@@ -53,13 +53,13 @@ export class PortfolioService {
       {
         id: 'qr-checks',
         title: 'QR Checks',
-        description: 'Platform for checking presences/leave of employees, students, business staff, stores via short temporary QR codes shown dynamically',
+        description: 'Platform for check-in presence/leave of employees, students, business staff, stores via short temporary QR codes shown dynamically',
         category: 'fullstack',
         status: 'completed',
         features: [
           {
             title: 'Backend/Database',
-            description: 'Real-time QR code management and validation',
+            description: 'Real-time QR code management and validation system',
             technologies: [
               { name: 'Node.js', icon: 'nodejs' },
               { name: 'Express', icon: 'express' },
@@ -95,7 +95,7 @@ export class PortfolioService {
         features: [
           {
             title: 'Backend/Database',
-            description: 'Secure messaging infrastructure',
+            description: 'Secure messaging infrastructure with real-time capabilities',
             technologies: [
               { name: 'JavaScript', icon: 'javascript' },
               { name: 'Node.js', icon: 'nodejs' },
@@ -104,16 +104,17 @@ export class PortfolioService {
           },
           {
             title: 'Mobile App',
-            description: 'Encrypted messaging with secure storage',
+            description: 'End-to-end encryption with X25519, secure storage, IndexedDB',
             technologies: [
               { name: 'Dart', icon: 'dart' },
               { name: 'Flutter', icon: 'flutter' },
-              { name: 'X25519 Encryption', icon: 'security' }
+              { name: 'X25519 Encryption', icon: 'security' },
+              { name: 'Cryptography', icon: 'security' }
             ]
           },
           {
-            title: 'Web Presentation',
-            description: 'App description, releases, email verification callbacks',
+            title: 'Presentation',
+            description: 'App description, releases, email verification and reset password callbacks',
             technologies: [
               { name: 'Web Technologies', icon: 'web' }
             ]
@@ -124,25 +125,31 @@ export class PortfolioService {
       {
         id: 'apple-health',
         title: 'AppleHealth',
-        description: 'Health social platform where users share Apple Health export data analysis and personal health dashboards',
+        description: 'Health social platform where users share Apple Health export data analysis and personal health dashboards (steps, running/walking distance, calories, exercise minutes)',
         category: 'fullstack',
         status: 'completed',
         features: [
           {
             title: 'Data Processing',
-            description: 'Secure Apple Health data interpretation and analysis',
+            description: 'Secure script that reads and interprets Apple Health data',
             technologies: [
               { name: 'Python', icon: 'python' },
               { name: 'Data Analysis', icon: 'analytics' }
             ]
           },
           {
-            title: 'Backend & Frontend',
-            description: 'Health data management and dashboard visualization',
+            title: 'Backend & Database',
+            description: 'Health data management and secure server communication',
             technologies: [
               { name: 'Node.js', icon: 'nodejs' },
               { name: 'Express', icon: 'express' },
-              { name: 'PostgreSQL', icon: 'postgresql' },
+              { name: 'PostgreSQL', icon: 'postgresql' }
+            ]
+          },
+          {
+            title: 'Frontend Dashboard',
+            description: 'Personal health dashboard and social sharing features',
+            technologies: [
               { name: 'Angular', icon: 'angular' }
             ]
           }
@@ -152,13 +159,13 @@ export class PortfolioService {
       {
         id: 'streetview-xeno',
         title: 'StreetViewXeno',
-        description: '360° images viewer platform based on Krpano viewer with timeline, map integration, and mass upload capabilities',
+        description: '360° images viewer platform based on Krpano viewer with timeline, map integration, directional hotspots, and XLSX mass upload system',
         category: 'fullstack',
         status: 'completed',
         features: [
           {
             title: 'Viewer Platform',
-            description: '360° visualization with timeline and map integration',
+            description: '360° visualization with timeline and map containing related spots',
             technologies: [
               { name: 'Krpano', icon: 'panorama' },
               { name: 'Web Technologies', icon: 'web' }
@@ -166,10 +173,18 @@ export class PortfolioService {
           },
           {
             title: 'Upload System',
-            description: 'XLSX images uploader with multiresolution converter',
+            description: 'XLSX images uploader with custom generator and multiresolution converter',
             technologies: [
               { name: 'Image Processing', icon: 'image' },
               { name: 'XLSX Generator', icon: 'excel' }
+            ]
+          },
+          {
+            title: 'Advanced Features',
+            description: 'Directional hotspots and mass images upload with conversion',
+            technologies: [
+              { name: 'Image Converter', icon: 'transform' },
+              { name: 'Krpano Integration', icon: 'integration' }
             ]
           }
         ],
@@ -180,16 +195,17 @@ export class PortfolioService {
       {
         id: 'botola-max',
         title: 'BotolaMax',
-        description: 'Mobile application for football matches, competitions, results with relevant statistics',
+        description: 'Mobile application for football matches, competitions, and results with comprehensive statistics',
         category: 'mobile',
         status: 'completed',
         features: [
           {
-            title: 'Football Data',
-            description: 'Live matches, competitions, and statistics',
+            title: 'Football Data Management',
+            description: 'Live matches, competitions, and relevant statistics',
             technologies: [
               { name: 'Flutter', icon: 'flutter' },
-              { name: 'Sports APIs', icon: 'sports' }
+              { name: 'Sports APIs', icon: 'sports' },
+              { name: 'Data Analytics', icon: 'analytics' }
             ]
           }
         ],
@@ -198,17 +214,18 @@ export class PortfolioService {
       {
         id: 'geolight-meter',
         title: 'Geolight Meter',
-        description: 'Mobile app tool for collection of lux light data with geolocation, handles XLSX exports',
+        description: 'Mobile tool for collection of lux light data with geolocation, handles XLSX exports for analysis',
         category: 'mobile',
         status: 'completed',
         features: [
           {
-            title: 'Light Measurement',
-            description: 'Lux data collection with GPS coordinates',
+            title: 'Light & Location Data',
+            description: 'Lux data collection with precise GPS coordinates',
             technologies: [
               { name: 'Flutter', icon: 'flutter' },
-              { name: 'Sensors', icon: 'sensor' },
-              { name: 'GPS', icon: 'location' }
+              { name: 'Light Sensors', icon: 'sensor' },
+              { name: 'GPS/Geolocation', icon: 'location' },
+              { name: 'XLSX Export', icon: 'excel' }
             ]
           }
         ],
@@ -217,36 +234,57 @@ export class PortfolioService {
       {
         id: 'pharmagest',
         title: 'Pharmagest',
-        description: 'Pharmacy management mobile app for inventory and sales management',
+        description: 'Pharmacy management mobile application for inventory, sales, and customer management (ongoing)',
         category: 'mobile',
         status: 'ongoing',
         features: [
           {
             title: 'Pharmacy Management',
-            description: 'Complete pharmacy operations management',
+            description: 'Complete pharmacy operations and inventory management',
             technologies: [
               { name: 'Flutter', icon: 'flutter' },
-              { name: 'Database', icon: 'database' }
+              { name: 'Database Management', icon: 'database' },
+              { name: 'Business Logic', icon: 'business' }
             ]
           }
         ],
         technologies: []
       },
       
-      // Dev Tools
+      // Online/Dev Tools
       {
-        id: 'svg-playground',
-        title: 'SVG Playground',
-        description: 'Create stunning SVG graphics with free online generator. Design polygons, stars, spirals, and curved shapes with real-time preview',
+        id: 'portfolio-website',
+        title: 'Portfolio Website',
+        description: 'This stunning Angular portfolio showcasing skills, projects, and professional experience',
         category: 'tool',
         status: 'completed',
         features: [
           {
-            title: 'SVG Generation',
-            description: 'Real-time SVG creation and preview',
+            title: 'Modern Portfolio',
+            description: 'Comprehensive showcase of expertise and experience',
             technologies: [
-              { name: 'Web Technologies', icon: 'web' },
-              { name: 'SVG', icon: 'svg' }
+              { name: 'Angular', icon: 'angular' },
+              { name: 'TypeScript', icon: 'typescript' },
+              { name: 'GSAP Animations', icon: 'animation' }
+            ]
+          }
+        ],
+        technologies: []
+      },
+      {
+        id: 'svg-playground',
+        title: 'SVG Playground',
+        description: 'Create stunning SVG graphics with free online generator. Design polygons, stars, spirals, and curved shapes with real-time preview. Export as SVG or PNG.',
+        category: 'tool',
+        status: 'completed',
+        features: [
+          {
+            title: 'SVG Creation Tool',
+            description: 'Real-time SVG generation with multiple shape types',
+            technologies: [
+              { name: 'JavaScript', icon: 'javascript' },
+              { name: 'SVG', icon: 'svg' },
+              { name: 'Canvas', icon: 'canvas' }
             ]
           }
         ],
@@ -255,17 +293,18 @@ export class PortfolioService {
       {
         id: 'power-geojson',
         title: 'PowerGeoJSON',
-        description: 'Powerful tool for GeoJSON with flutter_map, styled from properties, supports ESRI JSON',
+        description: 'Powerful tool for GeoJSON with flutter_map, styled from properties, supports Esri JSON, soon supports multiple projections',
         category: 'tool',
         status: 'completed',
         features: [
           {
-            title: 'Flutter Package',
-            description: 'Published on pub.dev for Flutter community',
+            title: 'Flutter Package (pub.dev)',
+            description: 'Advanced GeoJSON processing with flutter_map integration',
             technologies: [
               { name: 'Dart', icon: 'dart' },
               { name: 'Flutter', icon: 'flutter' },
-              { name: 'GeoJSON', icon: 'geojson' }
+              { name: 'GeoJSON', icon: 'geojson' },
+              { name: 'Esri JSON', icon: 'esri' }
             ]
           }
         ],
@@ -279,11 +318,12 @@ export class PortfolioService {
         status: 'completed',
         features: [
           {
-            title: 'Compass Plugin',
-            description: 'Magnetic north orientation measurement',
+            title: 'Compass Plugin (pub.dev)',
+            description: 'Precise azimuth measurement for navigation apps',
             technologies: [
               { name: 'Flutter', icon: 'flutter' },
-              { name: 'Sensors', icon: 'sensor' }
+              { name: 'Compass Sensors', icon: 'sensor' },
+              { name: 'Magnetometer', icon: 'sensor' }
             ]
           }
         ],
@@ -292,16 +332,55 @@ export class PortfolioService {
       {
         id: 'popup-menu-2',
         title: 'Popup Menu 2',
-        description: 'Popup menu with clickable buttons and global click function to maintain user attention',
+        description: 'Popup menu with clickable buttons and global click function to maintain user attention without breaking focus',
         category: 'tool',
         status: 'completed',
         features: [
           {
-            title: 'UI Component',
-            description: 'Flutter popup menu component',
+            title: 'UI Component (pub.dev)',
+            description: 'User-attention focused popup menu design',
             technologies: [
               { name: 'Flutter', icon: 'flutter' },
-              { name: 'UI/UX', icon: 'design' }
+              { name: 'UI/UX Design', icon: 'design' },
+              { name: 'Dart', icon: 'dart' }
+            ]
+          }
+        ],
+        technologies: []
+      },
+      {
+        id: 'json-dart-converter',
+        title: 'JSON to Dart Model Converter',
+        description: 'Online tool for converting JSON data structures to Dart model classes automatically',
+        category: 'tool',
+        status: 'completed',
+        features: [
+          {
+            title: 'Code Generation Tool',
+            description: 'Automated Dart model class generation from JSON',
+            technologies: [
+              { name: 'JavaScript', icon: 'javascript' },
+              { name: 'JSON Parser', icon: 'json' },
+              { name: 'Code Generation', icon: 'code' }
+            ]
+          }
+        ],
+        technologies: []
+      },
+      {
+        id: 'image-360-converter',
+        title: 'Image 360° Converter',
+        description: 'Convert 360° images to multiresolution format with XLSX generator for StreetViewXeno integration',
+        category: 'tool',
+        status: 'completed',
+        features: [
+          {
+            title: 'Image Processing Tool',
+            description: 'Multiresolution conversion and XLSX generation for 360° platforms',
+            technologies: [
+              { name: 'Image Processing', icon: 'image' },
+              { name: 'XLSX Generation', icon: 'excel' },
+              { name: 'Krpano Integration', icon: 'integration' }
             ]
           }
         ],
@@ -310,18 +389,27 @@ export class PortfolioService {
       {
         id: 'soil-moisture-fetcher',
         title: 'Soil Moisture Fetcher',
-        description: 'Automated soil moisture monitoring using satellite remote sensing data from Sentinel-1 and NASA SMAP',
+        description: 'Automated soil moisture monitoring system using satellite remote sensing data from Sentinel-1 and NASA SMAP for precision agriculture',
         category: 'tool',
         status: 'completed',
         features: [
           {
             title: 'Satellite Data Processing',
-            description: 'Automated monitoring with real-time tracking',
+            description: 'Daily imagery retrieval, moisture maps generation, GeoTIFF/JPEG exports',
             technologies: [
               { name: 'Python', icon: 'python' },
               { name: 'Google Earth Engine', icon: 'earth-engine' },
               { name: 'Docker', icon: 'docker' },
               { name: 'PostgreSQL', icon: 'postgresql' }
+            ]
+          },
+          {
+            title: 'Automated Monitoring',
+            description: 'Real-time tracking with notifications for smart irrigation and environmental research',
+            technologies: [
+              { name: 'Sentinel-1', icon: 'satellite' },
+              { name: 'NASA SMAP', icon: 'satellite' },
+              { name: 'Automation', icon: 'automation' }
             ]
           }
         ],
@@ -330,16 +418,17 @@ export class PortfolioService {
       {
         id: 'pc-cleaner',
         title: 'Automatic PC Cleaner',
-        description: 'Automated Windows system maintenance script running weekly to optimize disk space and performance',
+        description: 'Automated Windows system maintenance script running weekly to clean temp files, clear caches, empty Recycle Bin, and optimize disk space',
         category: 'tool',
         status: 'completed',
         features: [
           {
-            title: 'System Optimization',
-            description: 'Automated cleanup with logging and reporting',
+            title: 'System Maintenance',
+            description: 'Hands-free system optimization with automated logging and email reporting',
             technologies: [
               { name: 'PowerShell', icon: 'powershell' },
-              { name: 'Task Scheduler', icon: 'windows' }
+              { name: 'Task Scheduler', icon: 'windows' },
+              { name: 'Email Automation', icon: 'email' }
             ]
           }
         ],
@@ -351,21 +440,22 @@ export class PortfolioService {
         company: 'Marafik/Majal Berkane',
         role: 'Full Stack Developer & GIS Specialist',
         period: '2020 - Present',
-        description: '~75% of time generating maps, statistics on-the-fly, measuring distances, data management, conversion, cleaning, processing, analyzing, interoperability, ArcGIS Online data collection & dashboarding',
+        description: '~75% of time generating maps, statistics on-the-fly, measuring distances, data management, conversion, cleaning, processing, analyzing, interoperability, ArcGIS Online data collection & dashboarding. Leading innovative digital solutions for urban development and citizen services.',
         projects: [
           {
             id: 'find-tobissi',
             title: 'Find Tobissi',
-            description: 'Mobile app for estimating bus arrival time and distance',
+            description: 'Mobile application for estimating bus arrival time and distance to improve public transportation experience',
             category: 'professional',
             status: 'completed',
             features: [
               {
-                title: 'Real-time Tracking',
-                description: 'Bus location and ETA estimation',
+                title: 'Real-time Bus Tracking',
+                description: 'GPS-based bus location tracking with accurate arrival time estimation',
                 technologies: [
                   { name: 'Mobile Development', icon: 'mobile' },
-                  { name: 'GPS Tracking', icon: 'location' }
+                  { name: 'GPS Tracking', icon: 'location' },
+                  { name: 'Real-time Data', icon: 'real-time' }
                 ]
               }
             ],
@@ -374,16 +464,17 @@ export class PortfolioService {
           {
             id: 'eco-geste',
             title: 'ÉCO-GESTE',
-            description: 'Ecological awareness mobile app encouraging citizens to sort waste with reward points convertible to gifts',
+            description: 'Ecological awareness mobile application encouraging citizens to sort waste with reward points convertible to gifts, promoting environmental sustainability',
             category: 'professional',
             status: 'completed',
             features: [
               {
-                title: 'Gamification System',
-                description: 'Reward points for ecological behavior',
+                title: 'Gamification & Rewards',
+                description: 'Point-based reward system for ecological behavior with gift conversion',
                 technologies: [
                   { name: 'Mobile Development', icon: 'mobile' },
-                  { name: 'Gamification', icon: 'game' }
+                  { name: 'Gamification', icon: 'game' },
+                  { name: 'Reward System', icon: 'reward' }
                 ]
               }
             ],
@@ -392,16 +483,17 @@ export class PortfolioService {
           {
             id: 'borne-citoyenne',
             title: 'Borne Citoyenne',
-            description: 'Citizen service application for Berkane commune measuring satisfaction levels and providing service information',
+            description: 'Citizen service application for Berkane commune measuring satisfaction levels and providing comprehensive service information to improve citizen engagement',
             category: 'professional',
             status: 'completed',
             features: [
               {
-                title: 'Citizen Services',
-                description: 'Satisfaction surveys and document consultation',
+                title: 'Citizen Services Platform',
+                description: 'Satisfaction surveys, document consultation, and service information management',
                 technologies: [
                   { name: 'Mobile Development', icon: 'mobile' },
-                  { name: 'Data Sync', icon: 'sync' }
+                  { name: 'Data Synchronization', icon: 'sync' },
+                  { name: 'Survey System', icon: 'survey' }
                 ]
               }
             ],

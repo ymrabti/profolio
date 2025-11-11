@@ -1,8 +1,8 @@
 <section id="projects" class="projects-section">
   <div class="container">
     <div class="projects-header">
-      <h2 class="section-title">{{ t('projects.title') }}</h2>
-      <p class="section-subtitle">{{ t('projects.subtitle') }}</p>
+      <h2 class="section-title">{{ 'projects.title' | translate }}</h2>
+      <p class="section-subtitle">{{ 'projects.subtitle' | translate }}</p>
     </div>
 
     <div class="project-tabs">
@@ -12,7 +12,7 @@
         class="tab"
         [class.active]="selectedCategory === category"
         (click)="selectCategory(category)">
-        {{ t('projects.categories.' + category) }}
+        {{ 'projects.categories.' + category | translate }}
       </button>
     </div>
 
@@ -30,7 +30,7 @@
                 {{ getStatusIcon(project.status) }}
               </mat-icon>
               <span class="status-text">
-                {{ t('projects.status.' + project.status) }}
+                {{ 'projects.status.' + project.status | translate }}
               </span>
             </div>
           </div>
@@ -49,7 +49,7 @@
 
         <div class="project-content" *ngIf="isProjectExpanded(project.id)">
           <div class="features-section" *ngIf="project.features.length > 0">
-            <h4 class="features-title">{{ t('projects.features') }}</h4>
+            <h4 class="features-title">{{ 'projects.features' | translate }}</h4>
             <div class="features-grid">
               <div *ngFor="let feature of project.features" class="feature-item">
                 <h5 class="feature-title">{{ feature.title }}</h5>
@@ -105,7 +105,7 @@
             mat-button
             class="view-more-btn"
             (click)="toggleProjectExpansion(project.id)">
-            {{ t('projects.viewMore') }}
+            {{ 'projects.viewMore' | translate }}
             <mat-icon>arrow_forward</mat-icon>
           </button>
         </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
-import { SimpleTranslateService } from '../../services/simple-translate.service';
+import { TranslateService } from '@ngx-translate/core';
 import { ProfessionalContribution } from '../../models/portfolio.model';
 
 @Component({
@@ -13,17 +13,12 @@ export class ExperienceSectionComponent implements OnInit {
 
   constructor(
     private portfolioService: PortfolioService,
-    private translate: SimpleTranslateService
+    private translate: TranslateService
   ) {}
 
   ngOnInit(): void {
     this.portfolioService.getProfessionalContributions().subscribe(contributions => {
       this.contributions = contributions;
     });
-  }
-
-  // Translation helper method
-  t(key: string): string {
-    return this.translate.instant(key);
   }
 }

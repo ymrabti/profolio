@@ -1,8 +1,8 @@
 <section id="skills" class="skills-section">
   <div class="container">
     <div class="skills-header">
-      <h2 class="section-title">{{ t('skills.title') }}</h2>
-      <p class="section-subtitle">{{ t('skills.subtitle') }}</p>
+      <h2 class="section-title">{{ 'skills.title' | translate }}</h2>
+      <p class="section-subtitle">{{ 'skills.subtitle' | translate }}</p>
     </div>
 
     <div class="category-tabs">
@@ -12,7 +12,7 @@
         class="tab"
         [class.active]="selectedCategory === category"
         (click)="selectCategory(category)">
-        {{ t('skills.categories.' + category) }}
+        {{ 'skills.categories.' + category | translate }}
       </button>
     </div>
 

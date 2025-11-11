@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
-import { SimpleTranslateService } from '../../services/simple-translate.service';
+import { TranslateService } from '@ngx-translate/core';
 import { PersonalInfo } from '../../models/portfolio.model';
 import { gsap } from 'gsap';
 
@@ -15,7 +15,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
   constructor(
     private portfolioService: PortfolioService,
-    private translate: SimpleTranslateService
+    private translate: TranslateService
   ) {}
 
   ngOnInit(): void {
