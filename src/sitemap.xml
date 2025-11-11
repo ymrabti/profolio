@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.youmti.net/</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.youmti.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.youmti.net/fr"/>
+  </url>
+  
+  <!-- French version -->
+  <url>
+    <loc>https://www.youmti.net/fr</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.youmti.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.youmti.net/fr"/>
+  </url>
+  
+  <!-- Skills section -->
+  <url>
+    <loc>https://www.youmti.net/#skills</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Projects section -->
+  <url>
+    <loc>https://www.youmti.net/#projects</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Experience section -->
+  <url>
+    <loc>https://www.youmti.net/#experience</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Contact section -->
+  <url>
+    <loc>https://www.youmti.net/#contact</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

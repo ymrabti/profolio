@@ -138,7 +138,7 @@
       position: absolute;
       bottom: 2rem;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%) translateY(150%);
       cursor: pointer;
       display: flex;
       flex-direction: column;
