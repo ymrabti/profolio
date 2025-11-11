@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "name": "Younes MRABTI",
+    "tagline": "Serving the code community",
+    "description": "Full Stack Developer & GIS Specialist with expertise in modern web technologies, mobile development, and geospatial solutions. Passionate about creating innovative platforms and contributing to the developer community.",
+    "scrollDown": "Scroll Down to Explore"
+  },
+  "navigation": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "skills": {
+    "title": "Technical Skills & Expertise",
+    "subtitle": "Technologies and tools I use to build amazing solutions",
+    "categories": {
+      "dev": "Development",
+      "ops": "DevOps",
+      "database": "Databases", 
+      "gis": "GIS & Mapping",
+      "ide": "Development Tools"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Innovative solutions across web, mobile, and GIS platforms",
+    "categories": {
+      "fullstack": "FullStack Platforms",
+      "mobile": "Mobile Applications",
+      "tool": "Development Tools",
+      "professional": "Professional Work"
+    },
+    "status": {
+      "completed": "Completed",
+      "ongoing": "In Progress",
+      "planned": "Planned"
+    },
+    "viewMore": "View Details",
+    "technologies": "Technologies Used",
+    "features": "Key Features"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "Contributing to meaningful projects and organizations",
+    "current": "Current Position",
+    "responsibilities": "Key Responsibilities"
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "subtitle": "Find me on these platforms",
+    "github": "GitHub Repositories",
+    "linkedin": "Professional Network",
+    "patreon": "Support My Work"
+  },
+  "common": {
+    "readMore": "Read More",
+    "viewProject": "View Project",
+    "learnMore": "Learn More",
+    "backToTop": "Back to Top"
+  }
+}

@@ -1,0 +1,36 @@
+<section id="experience" class="experience-section">
+  <div class="container">
+    <div class="experience-header">
+      <h2 class="section-title">{{ 'experience.title' | translate }}</h2>
+      <p class="section-subtitle">{{ 'experience.subtitle' | translate }}</p>
+    </div>
+
+    <div class="timeline">
+      <div *ngFor="let contribution of contributions" class="timeline-item">
+        <div class="timeline-marker"></div>
+        
+        <div class="experience-card">
+          <div class="card-header">
+            <h3 class="company-name">{{ contribution.company }}</h3>
+            <span class="period">{{ contribution.period }}</span>
+            <span class="current-badge" *ngIf="contribution.period.includes('Present')">
+              {{ 'experience.current' | translate }}
+            </span>
+          </div>
+          
+          <h4 class="role">{{ contribution.role }}</h4>
+          <p class="description">{{ contribution.description }}</p>
+          
+          <div class="projects-summary" *ngIf="contribution.projects.length > 0">
+            <h5 class="projects-title">Key Projects:</h5>
+            <div class="project-chips">
+              <mat-chip *ngFor="let project of contribution.projects" class="project-chip">
+                {{ project.title }}
+              </mat-chip>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

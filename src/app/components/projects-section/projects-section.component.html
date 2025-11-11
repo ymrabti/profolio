@@ -1,0 +1,123 @@
+<section id="projects" class="projects-section">
+  <div class="container">
+    <div class="projects-header">
+      <h2 class="section-title">{{ 'projects.title' | translate }}</h2>
+      <p class="section-subtitle">{{ 'projects.subtitle' | translate }}</p>
+    </div>
+
+    <div class="project-tabs">
+      <button 
+        *ngFor="let category of projectCategories"
+        mat-flat-button
+        class="tab"
+        [class.active]="selectedCategory === category"
+        (click)="selectCategory(category)">
+        {{ 'projects.categories.' + category | translate }}
+      </button>
+    </div>
+
+    <div class="projects-grid">
+      <div 
+        *ngFor="let project of projectsGrouped[selectedCategory]"
+        class="project-card"
+        [class.expanded]="isProjectExpanded(project.id)">
+        
+        <div class="project-header">
+          <div class="project-title-section">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <div class="project-status">
+              <mat-icon [style.color]="getStatusColor(project.status)">
+                {{ getStatusIcon(project.status) }}
+              </mat-icon>
+              <span class="status-text">
+                {{ 'projects.status.' + project.status | translate }}
+              </span>
+            </div>
+          </div>
+          
+          <button 
+            mat-icon-button
+            class="expand-button"
+            (click)="toggleProjectExpansion(project.id)">
+            <mat-icon>
+              {{ isProjectExpanded(project.id) ? 'expand_less' : 'expand_more' }}
+            </mat-icon>
+          </button>
+        </div>
+
+        <p class="project-description">{{ project.description }}</p>
+
+        <div class="project-content" *ngIf="isProjectExpanded(project.id)">
+          <div class="features-section" *ngIf="project.features.length > 0">
+            <h4 class="features-title">{{ 'projects.features' | translate }}</h4>
+            <div class="features-grid">
+              <div *ngFor="let feature of project.features" class="feature-item">
+                <h5 class="feature-title">{{ feature.title }}</h5>
+                <p class="feature-description">{{ feature.description }}</p>
+                <div class="feature-tech">
+                  <mat-chip 
+                    *ngFor="let tech of feature.technologies"
+                    class="tech-chip">
+                    {{ tech.name }}
+                  </mat-chip>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-actions">
+            <button 
+              *ngIf="project.githubUrl"
+              mat-raised-button
+              class="action-btn github-btn">
+              <mat-icon>code</mat-icon>
+              GitHub
+            </button>
+            
+            <button 
+              *ngIf="project.liveUrl"
+              mat-raised-button
+              class="action-btn live-btn">
+              <mat-icon>launch</mat-icon>
+              Live Demo
+            </button>
+            
+            <button 
+              *ngIf="project.playStoreUrl"
+              mat-raised-button
+              class="action-btn play-btn">
+              <mat-icon>shop</mat-icon>
+              Play Store
+            </button>
+            
+            <button 
+              *ngIf="project.appStoreUrl"
+              mat-raised-button
+              class="action-btn app-btn">
+              <mat-icon>phone_iphone</mat-icon>
+              App Store
+            </button>
+          </div>
+        </div>
+
+        <div class="project-footer" *ngIf="!isProjectExpanded(project.id)">
+          <button 
+            mat-button
+            class="view-more-btn"
+            (click)="toggleProjectExpansion(project.id)">
+            {{ 'projects.viewMore' | translate }}
+            <mat-icon>arrow_forward</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="background-pattern">
+    <div class="pattern-dot dot-1"></div>
+    <div class="pattern-dot dot-2"></div>
+    <div class="pattern-dot dot-3"></div>
+    <div class="pattern-line line-1"></div>
+    <div class="pattern-line line-2"></div>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+<footer id="contact" class="footer-section">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-header">
+        <h2 class="section-title">{{ 'contact.title' | translate }}</h2>
+        <p class="section-subtitle">{{ 'contact.subtitle' | translate }}</p>
+      </div>
+
+      <div class="social-links">
+        <a 
+          *ngFor="let link of externalLinks"
+          [href]="link.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          [title]="link.description">
+          
+          <div class="link-icon">
+            <mat-icon>{{ getSocialIcon(link.platform) }}</mat-icon>
+          </div>
+          
+          <div class="link-info">
+            <h4 class="link-title">{{ link.platform }}</h4>
+            <p class="link-description">{{ link.description }}</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>&copy; {{ currentYear }} Younes MRABTI. All rights reserved.</p>
+          <p class="tagline">Serving the code community</p>
+        </div>
+        
+        <button 
+          mat-fab
+          class="back-to-top"
+          (click)="scrollToTop()"
+          title="{{ 'common.backToTop' | translate }}">
+          <mat-icon>keyboard_arrow_up</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-background">
+    <div class="wave wave-1"></div>
+    <div class="wave wave-2"></div>
+    <div class="particles"></div>
+  </div>
+</footer>

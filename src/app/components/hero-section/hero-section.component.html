@@ -1,0 +1,40 @@
+<section class="hero-section">
+  <div class="particles-container">
+    <!-- Particles will be added here -->
+  </div>
+  
+  <div class="hero-content">
+    <div class="language-toggle">
+      <button mat-icon-button (click)="toggleLanguage()" class="lang-button">
+        <mat-icon>language</mat-icon>
+        <span>{{ currentLanguage.toUpperCase() }}</span>
+      </button>
+    </div>
+
+    <div class="hero-main">
+      <div class="hero-avatar">
+        <img [src]="personalInfo?.avatarUrl || '/assets/images/default-avatar.jpg'" 
+             [alt]="personalInfo?.name" 
+             class="avatar-image">
+        <div class="avatar-ring"></div>
+      </div>
+
+      <div class="hero-text">
+        <h1 class="hero-name">{{ 'hero.name' | translate }}</h1>
+        <p class="hero-tagline">{{ 'hero.tagline' | translate }}</p>
+        <p class="hero-description">{{ 'hero.description' | translate }}</p>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" (click)="scrollToSection('skills')">
+      <span class="scroll-text">{{ 'hero.scrollDown' | translate }}</span>
+      <mat-icon class="scroll-icon">keyboard_arrow_down</mat-icon>
+    </div>
+  </div>
+
+  <div class="hero-background">
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+  </div>
+</section>

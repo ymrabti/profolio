@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "name": "Younes MRABTI",
+    "tagline": "Au service de la communauté code",
+    "description": "Développeur Full Stack et Spécialiste SIG avec une expertise en technologies web modernes, développement mobile et solutions géospatiales. Passionné par la création de plateformes innovantes et la contribution à la communauté des développeurs.",
+    "scrollDown": "Faites défiler pour explorer"
+  },
+  "navigation": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+  "skills": {
+    "title": "Compétences Techniques et Expertise",
+    "subtitle": "Technologies et outils que j'utilise pour créer des solutions extraordinaires",
+    "categories": {
+      "dev": "Développement",
+      "ops": "DevOps",
+      "database": "Bases de données",
+      "gis": "SIG & Cartographie",
+      "ide": "Outils de Développement"
+    }
+  },
+  "projects": {
+    "title": "Projets Phares",
+    "subtitle": "Solutions innovantes sur les plateformes web, mobile et SIG",
+    "categories": {
+      "fullstack": "Plateformes FullStack",
+      "mobile": "Applications Mobiles",
+      "tool": "Outils de Développement",
+      "professional": "Travail Professionnel"
+    },
+    "status": {
+      "completed": "Terminé",
+      "ongoing": "En cours",
+      "planned": "Planifié"
+    },
+    "viewMore": "Voir les détails",
+    "technologies": "Technologies utilisées",
+    "features": "Fonctionnalités clés"
+  },
+  "experience": {
+    "title": "Expérience Professionnelle",
+    "subtitle": "Contribuer à des projets significatifs et aux organisations",
+    "current": "Poste actuel",
+    "responsibilities": "Responsabilités clés"
+  },
+  "contact": {
+    "title": "Restons connectés",
+    "subtitle": "Retrouvez-moi sur ces plateformes",
+    "github": "Dépôts GitHub",
+    "linkedin": "Réseau professionnel",
+    "patreon": "Soutenez mon travail"
+  },
+  "common": {
+    "readMore": "Lire la suite",
+    "viewProject": "Voir le projet",
+    "learnMore": "En savoir plus",
+    "backToTop": "Retour en haut"
+  }
+}
