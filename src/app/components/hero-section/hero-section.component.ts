@@ -52,7 +52,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
                 {
                     y: 0,
                     opacity: 1,
-                    duration: 0.8,
+                    duration: 0.4,
                     ease: 'power2.out',
                 },
                 '-=0.6'
@@ -63,7 +63,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
                 {
                     y: 0,
                     opacity: 1,
-                    duration: 0.8,
+                    duration: 0.4,
                     ease: 'power2.out',
                 },
                 '-=0.4'
@@ -74,7 +74,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
                 {
                     y: 0,
                     opacity: 1,
-                    duration: 0.8,
+                    duration: 0.4,
                     ease: 'power2.out',
                 },
                 '-=0.4'

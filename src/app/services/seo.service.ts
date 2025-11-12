@@ -110,37 +110,38 @@ export class SeoService {
 
   generateStructuredData(): string {
     const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Younes MRABTI",
-      "jobTitle": "Full Stack Developer & GIS Specialist",
-      "description": this.defaultSEOData.description,
-      "url": this.defaultSEOData.url,
-      "image": this.defaultSEOData.image,
-      "sameAs": [
-        "https://linkedin.com/in/yourprofile",
-        "https://github.com/yourusername",
-        "https://twitter.com/yourtwitterhandle"
-      ],
-      "knowsAbout": [
-        "Web Development",
-        "Mobile Development",
-        "GIS",
-        "Angular",
-        "React",
-        "Node.js",
-        "TypeScript",
-        "JavaScript",
-        "Python"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance Developer"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "Country"
-      }
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Younes MRABTI',
+        jobTitle: 'Full Stack Developer & GIS Specialist',
+        description: this.defaultSEOData.description,
+        url: this.defaultSEOData.url,
+        image: this.defaultSEOData.image,
+        sameAs: [
+            'https://linkedin.com/in/younesmrabti1996',
+            'https://github.com/ymrabti',
+            'https://twitter.com/ymrabti_network',
+            'https://x.com/ymrabti_network',
+        ],
+        knowsAbout: [
+            'Web Development',
+            'Mobile Development',
+            'GIS',
+            'Angular',
+            'React',
+            'Node.js',
+            'TypeScript',
+            'JavaScript',
+            'Python',
+        ],
+        worksFor: {
+            '@type': 'Organization',
+            name: 'Freelance Developer',
+        },
+        address: {
+            '@type': 'PostalAddress',
+            addressCountry: 'Country',
+        },
     };
 
     return JSON.stringify(structuredData);

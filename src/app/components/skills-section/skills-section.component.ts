@@ -108,7 +108,7 @@ export class SkillsSectionComponent implements OnInit, AfterViewInit {
 
         gsap.from('.skill-progress', {
             width: '0%',
-            duration: 1.5,
+            duration: 1.2,
             stagger: 0.2,
             ease: 'power2.out',
             scrollTrigger: {

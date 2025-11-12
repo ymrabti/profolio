@@ -53,7 +53,7 @@ export class ProjectsSectionComponent implements OnInit, AfterViewInit {
       {
         y: 0,
         opacity: 1,
-        duration: 1,
+        duration: 0.8,
         ease: 'power2.out',
         scrollTrigger: {
           trigger: '.projects-section',
@@ -92,7 +92,7 @@ export class ProjectsSectionComponent implements OnInit, AfterViewInit {
       {
         y: 0,
         opacity: 1,
-        duration: 0.8,
+        duration: 0.3,
         stagger: 0.2,
         ease: 'power2.out',
         scrollTrigger: {
