@@ -1,6 +1,6 @@
 .github-banner {
-  position: absolute;
-  top: 100px;
+  position: fixed;
+  top: 80px;
   right: 20px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -349,7 +349,7 @@
 // Responsive design
 @media (max-width: 768px) {
   .github-banner {
-    top: 90px;
+    top: 70px;
     right: 10px;
     left: 10px;
     max-width: none;
