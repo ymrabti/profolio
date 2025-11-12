@@ -20,6 +20,7 @@ import { ProjectsSectionComponent } from './components/projects-section/projects
 import { ExperienceSectionComponent } from './components/experience-section/experience-section.component';
 import { FooterSectionComponent } from './components/footer-section/footer-section.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
+import { GithubBannerComponent } from './components/github-banner/github-banner.component';
 
 // Custom loader that loads from assets
 export class CustomTranslateLoader implements TranslateLoader {
@@ -44,6 +45,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ExperienceSectionComponent,
     FooterSectionComponent,
     ContactMeComponent,
+    GithubBannerComponent,
   ],
   imports: [
     BrowserModule,
