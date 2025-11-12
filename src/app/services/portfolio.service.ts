@@ -118,7 +118,7 @@ export class PortfolioService {
                 description:
                     'Platform for check-in presence/leave of employees, students, business staff, stores via short temporary QR codes shown dynamically',
                 category: 'fullstack',
-                status: 'completed',
+                status: 'ongoing',
                 features: [
                     {
                         title: 'Backend/Database',
@@ -158,7 +158,7 @@ export class PortfolioService {
                 description:
                     'Modern end-to-end encryption chat application supporting group chats and file sharing',
                 category: 'fullstack',
-                status: 'completed',
+                status: 'ongoing',
                 features: [
                     {
                         title: 'Backend/Database',
@@ -198,7 +198,7 @@ export class PortfolioService {
                 description:
                     'Health social platform where users share Apple Health export data analysis and personal health dashboards (steps, running/walking distance, calories, exercise minutes)',
                 category: 'fullstack',
-                status: 'completed',
+                status: 'planned',
                 features: [
                     {
                         title: 'Data Processing',

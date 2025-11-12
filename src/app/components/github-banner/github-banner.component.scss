@@ -1,6 +1,6 @@
 .github-banner {
-  position: fixed;
-  top: 80px;
+  position: absolute;
+  top: 100px;
   right: 20px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -15,9 +15,23 @@
   min-width: 280px;
   transform: translateX(100%);
   animation: slideInRight 0.6s ease-out 2s forwards;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   overflow: hidden;
-  position: relative;
+  
+  // Minimized state
+  &.minimized {
+    right: -240px; // Move mostly off-screen, showing just a small part
+    max-width: 280px;
+    min-width: 280px;
+    padding: 12px 16px;
+    border-radius: 16px 0 0 16px;
+    transform: translateX(0);
+    
+    &:hover {
+      right: -200px; // Show a bit more on hover
+      transform: translateY(-2px);
+    }
+  }
   
   // Add a subtle glow effect
   &::before {
@@ -59,6 +73,36 @@
   gap: 12px;
   position: relative;
   z-index: 2;
+}
+
+// Minimized content styles
+.minimized-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+  
+  .github-icon-mini {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    flex-shrink: 0;
+    
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  .star-indicator {
+    font-size: 16px;
+    animation: pulse 2s infinite;
+  }
 }
 
 .github-icon {
@@ -261,6 +305,17 @@
   }
 }
 
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
 // Hover effects
 .github-banner:hover {
   .arrow-icon {
@@ -294,12 +349,23 @@
 // Responsive design
 @media (max-width: 768px) {
   .github-banner {
-    top: 70px;
+    top: 90px;
     right: 10px;
     left: 10px;
     max-width: none;
     min-width: auto;
     padding: 14px 16px;
+    
+    &.minimized {
+      right: -60%;
+      left: auto;
+      max-width: 200px;
+      min-width: 200px;
+      
+      &:hover {
+        right: -40%;
+      }
+    }
   }
   
   .banner-text {

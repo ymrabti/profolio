@@ -1,0 +1,15 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/.wrangler": true,
+        "wrangler.toml": true,
+        ".angular": true,
+        ".vscode": true
+    }
+}

@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class GithubBannerComponent implements OnInit {
   githubUrl = 'https://github.com/ymrabti/profolio';
   isVisible = true;
+  isMinimized = false;
   
   ngOnInit(): void {
     // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('github-banner-dismissed');
-    if (dismissed === 'true') {
-      this.isVisible = false;
+    const minimized = localStorage.getItem('github-banner-minimized');
+    
+    if (minimized === 'true') {
+      this.isMinimized = true;
     }
   }
   
@@ -25,9 +27,22 @@ export class GithubBannerComponent implements OnInit {
   
   dismissBanner(event: Event): void {
     event.stopPropagation();
-    this.isVisible = false;
-    localStorage.setItem('github-banner-dismissed', 'true');
-    this.trackEvent('github_banner_dismissed');
+    if (this.isMinimized) {
+      // If already minimized, completely hide it
+      this.isVisible = true;
+      this.trackEvent('github_banner_dismissed');
+    } else {
+      // First time - just minimize to left
+      this.isMinimized = true;
+      localStorage.setItem('github-banner-minimized', 'true');
+      this.trackEvent('github_banner_minimized');
+    }
+  }
+  
+  expandBanner(): void {
+    this.isMinimized = false;
+    localStorage.removeItem('github-banner-minimized');
+    this.trackEvent('github_banner_expanded');
   }
   
   private trackEvent(eventName: string): void {
