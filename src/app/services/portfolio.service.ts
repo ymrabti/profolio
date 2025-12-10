@@ -544,7 +544,7 @@ export class PortfolioService {
                 role: 'Full Stack Developer & GIS Specialist',
                 period: '2020 - Present',
                 description:
-                    '~75% of time generating maps, statistics on-the-fly, measuring distances, data management, conversion, cleaning, processing, analyzing, interoperability, ArcGIS Online data collection & dashboarding. Leading innovative digital solutions for urban development and citizen services.',
+                    'Designed and delivered dynamic geospatial solutions, including real-time map generation, statistical analysis, and distance measurement. \nManaged the full data lifecycle—collection, conversion, cleaning, processing, analysis, and interoperability—using advanced GIS workflows. \nLed ArcGIS Online data collection initiatives and developed interactive dashboards to support urban development projects and enhance digital citizen services through innovative, data-driven solutions.',
                 projects: [
                     {
                         id: 'find-tobissi',
