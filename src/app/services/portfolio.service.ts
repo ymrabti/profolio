@@ -21,7 +21,7 @@ export class PortfolioService {
                 'Full Stack Developer & GIS Specialist with expertise in modern web technologies, mobile development, and geospatial solutions. Passionate about creating innovative platforms and contributing to the developer community.',
             avatarUrl: '/assets/images/avatar.jpg',
             location: 'Morocco',
-            email: 'younes.mrabti@example.com',
+            email: 'admin@youmrabti.com',
         },
         skills: [
             // Dev Skills
