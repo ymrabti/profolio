@@ -27,6 +27,10 @@ export class ProjectsSectionComponent implements OnInit, AfterViewInit {
     this.loadProjects();
   }
 
+  openUrl(url: string): void {
+    window.open(url, '_blank');
+  }
+
   ngAfterViewInit(): void {
     this.setupAnimations();
   }

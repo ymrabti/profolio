@@ -118,6 +118,7 @@ export class PortfolioService {
                 description:
                     'Platform for check-in presence/leave of employees, students, business staff, stores via short temporary QR codes shown dynamically',
                 category: 'fullstack',
+                liveUrl: 'https://qrchecks.youmrabti.com',
                 status: 'ongoing',
                 features: [
                     {
@@ -159,6 +160,7 @@ export class PortfolioService {
                     'Modern end-to-end encryption chat application supporting group chats and file sharing',
                 category: 'fullstack',
                 status: 'ongoing',
+                liveUrl: 'https://chat-up.youmrabti.com/',
                 features: [
                     {
                         title: 'Backend/Database',
@@ -198,7 +200,9 @@ export class PortfolioService {
                 description:
                     'Health social platform where users share Apple Health export data analysis and personal health dashboards (steps, running/walking distance, calories, exercise minutes)',
                 category: 'fullstack',
-                status: 'planned',
+                liveUrl: 'https://healthy.youmrabti.com/',
+                githubUrl: 'https://github.com/ymrabti/apple_health_ng',
+                status: 'completed',
                 features: [
                     {
                         title: 'Data Processing',
@@ -265,6 +269,8 @@ export class PortfolioService {
                     },
                 ],
                 technologies: [],
+                imageUrl: '/assets/images/avatar.jpg',
+                liveUrl: 'https://streetview_client.youmrabti.com/',
             },
 
             // Mobile Apps
@@ -295,6 +301,8 @@ export class PortfolioService {
                 description:
                     'Mobile tool for collection of lux light data with geolocation, handles XLSX exports for analysis',
                 category: 'mobile',
+                playStoreUrl:
+                    'https://play.google.com/store/apps/details?id=com.ymrabtiapps.geoligtmeter',
                 status: 'completed',
                 features: [
                     {
@@ -318,6 +326,8 @@ export class PortfolioService {
                     'Pharmacy management mobile application for inventory, sales, and customer management (ongoing)',
                 category: 'mobile',
                 status: 'ongoing',
+                playStoreUrl:
+                    'https://play.google.com/store/apps/details?id=com.ymrabtiapps.pharmagest',
                 features: [
                     {
                         title: 'Pharmacy Management',
@@ -341,6 +351,7 @@ export class PortfolioService {
                     'This stunning Angular portfolio showcasing skills, projects, and professional experience',
                 category: 'tool',
                 status: 'completed',
+                liveUrl: 'https://youmrabti.com',
                 features: [
                     {
                         title: 'Modern Portfolio',
@@ -362,6 +373,7 @@ export class PortfolioService {
                     'Create stunning SVG graphics with free online generator. Design polygons, stars, spirals, and curved shapes with real-time preview. Export as SVG or PNG.',
                 category: 'tool',
                 status: 'completed',
+                liveUrl: 'https://svg-playground.youmrabti.com',
                 features: [
                     {
                         title: 'SVG Creation Tool',
@@ -383,6 +395,9 @@ export class PortfolioService {
                     'Powerful tool for GeoJSON with flutter_map, styled from properties, supports Esri JSON, soon supports multiple projections',
                 category: 'tool',
                 status: 'completed',
+                githubUrl:
+                    'https://github.com/youmtinetflutterpacks/power_geojson',
+                liveUrl: 'https://pub.dev/packages/power_geojson',
                 features: [
                     {
                         title: 'Flutter Package (pub.dev)',
@@ -405,6 +420,9 @@ export class PortfolioService {
                     'Flutter Compass Tools Implementation measuring azimuth angle between magnetic north and device orientation',
                 category: 'tool',
                 status: 'completed',
+                githubUrl:
+                    'https://github.com/youmtinetflutterpacks/flutter_azimuth',
+                liveUrl: 'https://pub.dev/packages/flutter_azimuth',
                 features: [
                     {
                         title: 'Compass Plugin (pub.dev)',
@@ -426,6 +444,9 @@ export class PortfolioService {
                     'Popup menu with clickable buttons and global click function to maintain user attention without breaking focus',
                 category: 'tool',
                 status: 'completed',
+                githubUrl:
+                    'https://github.com/youmtinetflutterpacks/popup_menu_2',
+                liveUrl: 'https://pub.dev/packages/popup_menu_2',
                 features: [
                     {
                         title: 'UI Component (pub.dev)',
@@ -437,7 +458,11 @@ export class PortfolioService {
                         ],
                     },
                 ],
-                technologies: [],
+                technologies: [
+                    { name: 'Flutter', icon: 'flutter' },
+                    { name: 'Dart', icon: 'dart' },
+                    { name: 'VSCode', icon: 'vscode' },
+                ],
             },
             {
                 id: 'json-dart-converter',
@@ -446,6 +471,7 @@ export class PortfolioService {
                     'Online tool for converting JSON data structures to Dart model classes automatically',
                 category: 'tool',
                 status: 'completed',
+                githubUrl: 'https://github.com/ymrabti/vscode-dartify',
                 features: [
                     {
                         title: 'Code Generation Tool',
@@ -458,7 +484,11 @@ export class PortfolioService {
                         ],
                     },
                 ],
-                technologies: [],
+                technologies: [
+                    { name: 'JavaScript', icon: 'javascript' },
+                    { name: 'JSON', icon: 'json' },
+                    { name: 'VSCode', icon: 'vscode' },
+                ],
             },
             {
                 id: 'image-360-converter',
@@ -488,6 +518,7 @@ export class PortfolioService {
                     'Automated soil moisture monitoring system using satellite remote sensing data from Sentinel-1 and NASA SMAP for precision agriculture',
                 category: 'tool',
                 status: 'completed',
+                githubUrl: 'https://github.com/ymrabti/soil-moisture-fetcher',
                 features: [
                     {
                         title: 'Satellite Data Processing',
