@@ -12,9 +12,13 @@
         </div>
 
         <div class="projects-grid">
-            <div *ngFor="let project of projectsGrouped[selectedCategory]" class="project-card" [class.expanded]="isProjectExpanded(project.id)">
+            <div *ngFor="let project of projectsGrouped[selectedCategory]" class="project-card">
 
                 <div class="project-header">
+                    <div class="project-image-small" *ngIf="project.imageUrl">
+                        <img [src]="project.imageUrl" [alt]="project.title" loading="lazy" />
+                    </div>
+
                     <div class="project-title-section">
                         <h3 class="project-title">{{ project.title }}</h3>
                         <div class="project-status">
@@ -26,63 +30,104 @@
                             </span>
                         </div>
                     </div>
-
-                    <button mat-icon-button class="expand-button" (click)="toggleProjectExpansion(project.id)">
-                        <mat-icon>
-                            {{ isProjectExpanded(project.id) ? 'expand_less' : 'expand_more' }}
-                        </mat-icon>
-                    </button>
-                </div>
-
-                <div class="project-image" *ngIf="project.imageUrl">
-                    <img [src]="project.imageUrl" [alt]="project.title" loading="lazy" />
                 </div>
 
                 <p class="project-description">{{ project.description }}</p>
 
-                <div class="project-content" *ngIf="isProjectExpanded(project.id)">
-                    <div class="features-section" *ngIf="project.features.length > 0">
-                        <h4 class="features-title">{{ 'projects.features' | translate }}</h4>
-                        <div class="features-grid">
-                            <div *ngFor="let feature of project.features" class="feature-item">
-                                <h5 class="feature-title">{{ feature.title }}</h5>
-                                <p class="feature-description">{{ feature.description }}</p>
-                                <div class="feature-tech">
-                                    <mat-chip *ngFor="let tech of feature.technologies" class="tech-chip">
-                                        {{ tech.name }}
-                                    </mat-chip>
-                                </div>
-                            </div>
-                        </div>
+                <div class="project-footer">
+                    <div class="project-quick-actions">
+                        <button *ngIf="project.liveUrl" mat-icon-button class="quick-action-btn live-btn" 
+                                (click)="openUrl($event, project.liveUrl)" matTooltip="Live Demo">
+                            <mat-icon>launch</mat-icon>
+                        </button>
+
+                        <button *ngIf="project.playStoreUrl" mat-icon-button class="quick-action-btn play-btn" 
+                                (click)="openUrl($event, project.playStoreUrl)" matTooltip="Play Store">
+                            <mat-icon>shop</mat-icon>
+                        </button>
+
+                        <button *ngIf="project.appStoreUrl" mat-icon-button class="quick-action-btn app-btn" 
+                                (click)="openUrl($event, project.appStoreUrl)" matTooltip="App Store">
+                            <mat-icon>phone_iphone</mat-icon>
+                        </button>
+
+                        <button *ngIf="project.githubUrl" mat-icon-button class="quick-action-btn github-btn" 
+                                (click)="openUrl($event, project.githubUrl)" matTooltip="GitHub">
+                            <mat-icon>code</mat-icon>
+                        </button>
                     </div>
 
-                    <div class="project-actions">
-                        <button *ngIf="project.githubUrl" mat-raised-button class="action-btn github-btn" (click)="openUrl(project.githubUrl)">
-                            <mat-icon>code</mat-icon>
-                            GitHub
-                        </button>
+                    <button mat-button class="view-details-btn" (click)="openProjectModal(project)">
+                        {{ 'projects.viewMore' | translate }}
+                        <mat-icon>arrow_forward</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-                        <button *ngIf="project.liveUrl" mat-raised-button class="action-btn live-btn" (click)="openUrl(project.liveUrl)">
-                            <mat-icon>launch</mat-icon>
-                            Live Demo
-                        </button>
+        <!-- Project Modal -->
+        <div class="project-modal-overlay" *ngIf="selectedProject" [@modalAnimation] (click)="closeProjectModal()">
+            <div class="project-modal-card" (click)="$event.stopPropagation()" [@cardAnimation]>
+                <button mat-icon-button class="modal-close-btn" (click)="closeProjectModal()">
+                    <mat-icon>close</mat-icon>
+                </button>
 
-                        <button *ngIf="project.playStoreUrl" mat-raised-button class="action-btn play-btn" (click)="openUrl(project.playStoreUrl)">
-                            <mat-icon>store</mat-icon>
-                            Play Store
-                        </button>
-
-                        <button *ngIf="project.appStoreUrl" mat-raised-button class="action-btn app-btn" (click)="openUrl(project.appStoreUrl)">
-                            <mat-icon>phone_iphone</mat-icon>
-                            App Store
-                        </button>
+                <div class="modal-header">
+                    <h2 class="modal-title">{{ selectedProject.title }}</h2>
+                    <div class="project-status">
+                        <mat-icon [style.color]="getStatusColor(selectedProject.status)">
+                            {{ getStatusIcon(selectedProject.status) }}
+                        </mat-icon>
+                        <span class="status-text">
+                            {{ 'projects.status.' + selectedProject.status | translate }}
+                        </span>
                     </div>
                 </div>
 
-                <div class="project-footer" *ngIf="!isProjectExpanded(project.id)">
-                    <button mat-button class="view-more-btn" (click)="toggleProjectExpansion(project.id)">
-                        {{ 'projects.viewMore' | translate }}
-                        <mat-icon>arrow_forward</mat-icon>
+                <div class="modal-image" *ngIf="selectedProject.imageUrl" [@imageAnimation]>
+                    <img [src]="selectedProject.imageUrl" [alt]="selectedProject.title" />
+                </div>
+
+                <p class="modal-description">{{ selectedProject.description }}</p>
+
+                <div class="features-section" *ngIf="selectedProject.features.length > 0">
+                    <h4 class="features-title">{{ 'projects.features' | translate }}</h4>
+                    <div class="features-grid">
+                        <div *ngFor="let feature of selectedProject.features" class="feature-item">
+                            <h5 class="feature-title">{{ feature.title }}</h5>
+                            <p class="feature-description">{{ feature.description }}</p>
+                            <div class="feature-tech">
+                                <mat-chip *ngFor="let tech of feature.technologies" class="tech-chip">
+                                    {{ tech.name }}
+                                </mat-chip>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button *ngIf="selectedProject.githubUrl" mat-raised-button class="action-btn github-btn" 
+                            (click)="openUrl($event, selectedProject.githubUrl)">
+                        <mat-icon>code</mat-icon>
+                        GitHub
+                    </button>
+
+                    <button *ngIf="selectedProject.liveUrl" mat-raised-button class="action-btn live-btn" 
+                            (click)="openUrl($event, selectedProject.liveUrl)">
+                        <mat-icon>launch</mat-icon>
+                        Live Demo
+                    </button>
+
+                    <button *ngIf="selectedProject.playStoreUrl" mat-raised-button class="action-btn play-btn" 
+                            (click)="openUrl($event, selectedProject.playStoreUrl)">
+                        <mat-icon>shop</mat-icon>
+                        Play Store
+                    </button>
+
+                    <button *ngIf="selectedProject.appStoreUrl" mat-raised-button class="action-btn app-btn" 
+                            (click)="openUrl($event, selectedProject.appStoreUrl)">
+                        <mat-icon>phone_iphone</mat-icon>
+                        App Store
                     </button>
                 </div>
             </div>

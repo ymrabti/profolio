@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { PortfolioService } from '../../services/portfolio.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Project } from '../../models/portfolio.model';
@@ -10,13 +11,39 @@ gsap.registerPlugin(ScrollTrigger);
 @Component({
   selector: 'pro-projects-section',
   templateUrl: './projects-section.component.html',
-  styleUrl: './projects-section.component.scss'
+  styleUrl: './projects-section.component.scss',
+  animations: [
+    trigger('modalAnimation', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('300ms ease-out', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('200ms ease-in', style({ opacity: 0 }))
+      ])
+    ]),
+    trigger('cardAnimation', [
+      transition(':enter', [
+        style({ transform: 'scale(0.7) translateY(50px)', opacity: 0 }),
+        animate('400ms cubic-bezier(0.34, 1.56, 0.64, 1)', style({ transform: 'scale(1) translateY(0)', opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('250ms ease-in', style({ transform: 'scale(0.9)', opacity: 0 }))
+      ])
+    ]),
+    trigger('imageAnimation', [
+      transition(':enter', [
+        style({ transform: 'scale(0.8)', opacity: 0 }),
+        animate('500ms 100ms ease-out', style({ transform: 'scale(1)', opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class ProjectsSectionComponent implements OnInit, AfterViewInit {
   projectCategories = ['fullstack', 'mobile', 'tool', 'professional'];
   projectsGrouped: { [key: string]: Project[] } = {};
   selectedCategory = 'fullstack';
-  expandedProjects = new Set<string>();
+  selectedProject: Project | null = null;
 
   constructor(
     private portfolioService: PortfolioService,
@@ -27,8 +54,19 @@ export class ProjectsSectionComponent implements OnInit, AfterViewInit {
     this.loadProjects();
   }
 
-  openUrl(url: string): void {
+  openUrl(event: Event, url: string): void {
+    event.stopPropagation();
     window.open(url, '_blank');
+  }
+
+  openProjectModal(project: Project): void {
+    this.selectedProject = project;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeProjectModal(): void {
+    this.selectedProject = null;
+    document.body.style.overflow = '';
   }
 
   ngAfterViewInit(): void {
@@ -110,25 +148,12 @@ export class ProjectsSectionComponent implements OnInit, AfterViewInit {
   selectCategory(category: string): void {
     if (this.selectedCategory !== category) {
       this.selectedCategory = category;
-      this.expandedProjects.clear();
       
       // Re-animate project cards for new category
       setTimeout(() => {
         this.animateProjectCards();
       }, 100);
     }
-  }
-
-  toggleProjectExpansion(projectId: string): void {
-    if (this.expandedProjects.has(projectId)) {
-      this.expandedProjects.delete(projectId);
-    } else {
-      this.expandedProjects.add(projectId);
-    }
-  }
-
-  isProjectExpanded(projectId: string): boolean {
-    return this.expandedProjects.has(projectId);
   }
 
   getStatusColor(status: string): string {
