@@ -154,6 +154,20 @@
         flex: 1; // Take available space
       }
 
+      .project-image {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+
+        img {
+          max-width: 200px;
+          width: 100%;
+          height: auto;
+          border-radius: 24px;
+          display: block;
+        }
+      }
+
       .project-content {
         animation: fadeIn 0.3s ease-in-out;
         flex: 1; // Take available space

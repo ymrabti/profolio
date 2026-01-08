@@ -34,6 +34,10 @@
                     </button>
                 </div>
 
+                <div class="project-image" *ngIf="project.imageUrl">
+                    <img [src]="project.imageUrl" [alt]="project.title" loading="lazy" />
+                </div>
+
                 <p class="project-description">{{ project.description }}</p>
 
                 <div class="project-content" *ngIf="isProjectExpanded(project.id)">

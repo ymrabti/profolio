@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import {
-  PortfolioData,
-  Skill,
-  Project,
-  ProfessionalContribution,
-  ExternalLink,
-  PersonalInfo,
+    PortfolioData,
+    Skill,
+    Project,
+    ProfessionalContribution,
+    ExternalLink,
+    PersonalInfo,
 } from '../models/portfolio.model';
 
 @Injectable({
@@ -19,7 +19,7 @@ export class PortfolioService {
             tagline: 'Serving the code community',
             description:
                 'Full Stack Developer & GIS Specialist with expertise in modern web technologies, mobile development, and geospatial solutions. Passionate about creating innovative platforms and contributing to the developer community.',
-            avatarUrl: '/assets/images/avatar.jpg',
+            avatarUrl: 'https://avatars.githubusercontent.com/ymrabti',
             location: 'Morocco',
             email: 'admin@youmrabti.com',
         },
@@ -114,12 +114,13 @@ export class PortfolioService {
             // FullStack Platforms
             {
                 id: 'qr-checks',
-                title: 'QR Checks',
+                title: 'Presence flow with QR Codes',
                 description:
                     'Platform for check-in presence/leave of employees, students, business staff, stores via short temporary QR codes shown dynamically',
                 category: 'fullstack',
                 liveUrl: 'https://qrchecks.youmrabti.com',
                 status: 'ongoing',
+                imageUrl: '/assets/images/presence-flow.jpg',
                 features: [
                     {
                         title: 'Backend/Database',
@@ -159,6 +160,7 @@ export class PortfolioService {
                 description:
                     'Modern end-to-end encryption chat application supporting group chats and file sharing',
                 category: 'fullstack',
+                imageUrl: '/assets/images/chatup.jpg',
                 status: 'ongoing',
                 liveUrl: 'https://chat-up.youmrabti.com/',
                 features: [
@@ -202,6 +204,7 @@ export class PortfolioService {
                 category: 'fullstack',
                 liveUrl: 'https://healthy.youmrabti.com/',
                 githubUrl: 'https://github.com/ymrabti/apple_health_ng',
+                imageUrl: '/assets/images/apple-health.jpg',
                 status: 'completed',
                 features: [
                     {
@@ -268,8 +271,12 @@ export class PortfolioService {
                         ],
                     },
                 ],
-                technologies: [],
-                imageUrl: '/assets/images/avatar.jpg',
+                technologies: [
+                    { name: 'Krpano', icon: 'panorama' },
+                    { name: 'JavaScript', icon: 'javascript' },
+                    { name: 'XLSX', icon: 'excel' },
+                ],
+                imageUrl: '/assets/images/streetview.jpg',
                 liveUrl: 'https://streetview_client.youmrabti.com/',
             },
 
@@ -280,6 +287,7 @@ export class PortfolioService {
                 description:
                     'Mobile application for football matches, competitions, and results with comprehensive statistics',
                 category: 'mobile',
+                imageUrl: '/assets/images/botola-max.png',
                 status: 'completed',
                 features: [
                     {
@@ -301,6 +309,7 @@ export class PortfolioService {
                 description:
                     'Mobile tool for collection of lux light data with geolocation, handles XLSX exports for analysis',
                 category: 'mobile',
+                imageUrl: '/assets/images/geolightmeter-1.png',
                 playStoreUrl:
                     'https://play.google.com/store/apps/details?id=com.ymrabtiapps.geoligtmeter',
                 status: 'completed',
@@ -326,6 +335,7 @@ export class PortfolioService {
                     'Pharmacy management mobile application for inventory, sales, and customer management (ongoing)',
                 category: 'mobile',
                 status: 'ongoing',
+                imageUrl: '/assets/images/pharmagest.jpg',
                 playStoreUrl:
                     'https://play.google.com/store/apps/details?id=com.ymrabtiapps.pharmagest',
                 features: [
@@ -351,6 +361,7 @@ export class PortfolioService {
                     'This stunning Angular portfolio showcasing skills, projects, and professional experience',
                 category: 'tool',
                 status: 'completed',
+                imageUrl: 'https://avatars.githubusercontent.com/ymrabti',
                 liveUrl: 'https://youmrabti.com',
                 features: [
                     {
@@ -373,6 +384,8 @@ export class PortfolioService {
                     'Create stunning SVG graphics with free online generator. Design polygons, stars, spirals, and curved shapes with real-time preview. Export as SVG or PNG.',
                 category: 'tool',
                 status: 'completed',
+                githubUrl: 'https://github.com/ymrabti/svg-playground',
+                imageUrl: '/assets/images/svg-playground.png',
                 liveUrl: 'https://svg-playground.youmrabti.com',
                 features: [
                     {
@@ -397,6 +410,7 @@ export class PortfolioService {
                 status: 'completed',
                 githubUrl:
                     'https://github.com/youmtinetflutterpacks/power_geojson',
+                    imageUrl: '/assets/images/power_geojson.jpg',
                 liveUrl: 'https://pub.dev/packages/power_geojson',
                 features: [
                     {
