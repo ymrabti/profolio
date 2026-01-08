@@ -73,20 +73,25 @@
                 </button>
 
                 <div class="modal-header">
-                    <h2 class="modal-title">{{ selectedProject.title }}</h2>
-                    <div class="project-status">
-                        <mat-icon [style.color]="getStatusColor(selectedProject.status)">
-                            {{ getStatusIcon(selectedProject.status) }}
-                        </mat-icon>
-                        <span class="status-text">
-                            {{ 'projects.status.' + selectedProject.status | translate }}
-                        </span>
+                    <div class="modal-image-small" *ngIf="selectedProject.imageUrl">
+                        <img [src]="selectedProject.imageUrl" [alt]="selectedProject.title" />
+                    </div>
+                    <div class="modal-title-section">
+                        <h2 class="modal-title">{{ selectedProject.title }}</h2>
+                        <div class="project-status">
+                            <mat-icon [style.color]="getStatusColor(selectedProject.status)">
+                                {{ getStatusIcon(selectedProject.status) }}
+                            </mat-icon>
+                            <span class="status-text">
+                                {{ 'projects.status.' + selectedProject.status | translate }}
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="modal-image" *ngIf="selectedProject.imageUrl" [@imageAnimation]>
+                <!-- <div class="modal-image-large" *ngIf="selectedProject.imageUrl" [@imageAnimation]>
                     <img [src]="selectedProject.imageUrl" [alt]="selectedProject.title" />
-                </div>
+                </div> -->
 
                 <p class="modal-description">{{ selectedProject.description }}</p>
 
