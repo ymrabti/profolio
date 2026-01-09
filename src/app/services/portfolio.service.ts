@@ -155,48 +155,6 @@ export class PortfolioService {
                 technologies: [],
             },
             {
-                id: 'chatup',
-                title: 'ChatUp',
-                description:
-                    'Modern end-to-end encryption chat application supporting group chats and file sharing',
-                category: 'fullstack',
-                imageUrl: '/assets/images/chatup.jpg',
-                status: 'ongoing',
-                liveUrl: 'https://chat-up.youmrabti.com/',
-                features: [
-                    {
-                        title: 'Backend/Database',
-                        description:
-                            'Secure messaging infrastructure with real-time capabilities',
-                        technologies: [
-                            { name: 'JavaScript', icon: 'javascript' },
-                            { name: 'Node.js', icon: 'nodejs' },
-                            { name: 'MongoDB', icon: 'mongodb' },
-                        ],
-                    },
-                    {
-                        title: 'Mobile App',
-                        description:
-                            'End-to-end encryption with X25519, secure storage, IndexedDB',
-                        technologies: [
-                            { name: 'Dart', icon: 'dart' },
-                            { name: 'Flutter', icon: 'flutter' },
-                            { name: 'X25519 Encryption', icon: 'security' },
-                            { name: 'Cryptography', icon: 'security' },
-                        ],
-                    },
-                    {
-                        title: 'Presentation',
-                        description:
-                            'App description, releases, email verification and reset password callbacks',
-                        technologies: [
-                            { name: 'Web Technologies', icon: 'web' },
-                        ],
-                    },
-                ],
-                technologies: [],
-            },
-            {
                 id: 'apple-health',
                 title: 'AppleHealth',
                 description:
@@ -278,6 +236,75 @@ export class PortfolioService {
                 ],
                 imageUrl: '/assets/images/streetview.jpg',
                 liveUrl: 'https://streetview_client.youmrabti.com/',
+            }, //https://www.termsfeed.com/live/3ff1cea7-e4b0-4b92-aac1-bb1fdd0fb0c5
+            {
+                id: 'chatup',
+                title: 'ChatUp',
+                description:
+                    'Modern end-to-end encryption chat application supporting group chats and file sharing',
+                category: 'fullstack',
+                imageUrl: '/assets/images/chatup.jpg',
+                status: 'ongoing',
+                liveUrl: 'https://chat-up.youmrabti.com/',
+                features: [
+                    {
+                        title: 'Backend/Database',
+                        description:
+                            'Secure messaging infrastructure with real-time capabilities',
+                        technologies: [
+                            { name: 'JavaScript', icon: 'javascript' },
+                            { name: 'Node.js', icon: 'nodejs' },
+                            { name: 'MongoDB', icon: 'mongodb' },
+                        ],
+                    },
+                    {
+                        title: 'Mobile App',
+                        description:
+                            'End-to-end encryption with X25519, secure storage, IndexedDB',
+                        technologies: [
+                            { name: 'Dart', icon: 'dart' },
+                            { name: 'Flutter', icon: 'flutter' },
+                            { name: 'X25519 Encryption', icon: 'security' },
+                            { name: 'Cryptography', icon: 'security' },
+                        ],
+                    },
+                    {
+                        title: 'Presentation',
+                        description:
+                            'App description, releases, email verification and reset password callbacks',
+                        technologies: [
+                            { name: 'Web Technologies', icon: 'web' },
+                        ],
+                    },
+                ],
+                technologies: [],
+            },
+            {
+                id: 'pharmacie-de-garde',
+                title: 'Pharmacie de Garde Morocco',
+                description:
+                    'Web platform for locating on-duty pharmacies in Morocco with geolocation and search features',
+                category: 'fullstack',
+                status: 'ongoing',
+                features: [],
+                technologies: [
+                    { name: 'Next.js', icon: 'nextjs' },
+                    { name: 'TypeScript', icon: 'typescript' },
+                    { name: 'PostgreSQL', icon: 'postgresql' },
+                ],
+                imageUrl: '/assets/images/pharmacie-de-garde.jpg',
+                // liveUrl: 'https://pharmacie-de-garde.youmrabti.com/',
+            },
+            {
+                id: 'rifq',
+                title: 'RIFQ',
+                description:
+                    'RIFQ is a national digital platform for the identification, monitoring, and humane management of domestic and stray animals, supporting public health, animal welfare, and data-driven territorial governance.',
+                category: 'fullstack',
+                status: 'planned',
+                features: [],
+                imageUrl: '/assets/images/rifq.jpg',
+                technologies: [],
             },
 
             // Mobile Apps
@@ -350,7 +377,10 @@ export class PortfolioService {
                         ],
                     },
                 ],
-                technologies: [],
+                technologies: [
+                    { name: 'Flutter', icon: 'flutter' },
+                    { name: 'Dart', icon: 'dart' },
+                ],
             },
 
             // Online/Dev Tools
@@ -410,7 +440,7 @@ export class PortfolioService {
                 status: 'completed',
                 githubUrl:
                     'https://github.com/youmtinetflutterpacks/power_geojson',
-                    imageUrl: '/assets/images/power_geojson.jpg',
+                imageUrl: '/assets/images/power_geojson.jpg',
                 liveUrl: 'https://pub.dev/packages/power_geojson',
                 features: [
                     {

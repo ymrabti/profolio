@@ -1,0 +1,5 @@
+FROM nginx:1.25.4-alpine
+WORKDIR /app
+COPY ./dist/pro-folio/browser /usr/share/nginx/html
+EXPOSE 7836
+CMD ["nginx", "-g", "daemon off;"]
