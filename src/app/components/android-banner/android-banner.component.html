@@ -1,0 +1,39 @@
+<!-- Android Download Banner -->
+<div class="android-banner" [class.minimized]="isMinimized" *ngIf="isVisible" (click)="isMinimized ? expandBanner() : downloadAndroid()">
+
+    <div class="banner-content" *ngIf="!isMinimized">
+        <div class="android-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 2.078l1.679-1.679a.5.5 0 0 0-.707-.707L16.586 1.6a7.982 7.982 0 0 0-9.172 0L5.505.692a.5.5 0 0 0-.707.707l1.679 1.679A7.963 7.963 0 0 0 4 8v1h16V8a7.963 7.963 0 0 0-2.477-5.922zM9 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm6 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM4 10h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10z"/>
+            </svg>
+        </div>
+        <div class="banner-text">
+            <span class="primary-text">📱 Download Android App</span>
+            <span class="secondary-text">Get my portfolio on your Android device!</span>
+        </div>
+        <div class="arrow-icon">
+            <mat-icon>download</mat-icon>
+        </div>
+    </div>
+
+    <!-- Minimized State -->
+    <div class="minimized-content" *ngIf="isMinimized">
+        <div class="android-icon-mini">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 2.078l1.679-1.679a.5.5 0 0 0-.707-.707L16.586 1.6a7.982 7.982 0 0 0-9.172 0L5.505.692a.5.5 0 0 0-.707.707l1.679 1.679A7.963 7.963 0 0 0 4 8v1h16V8a7.963 7.963 0 0 0-2.477-5.922zM9 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm6 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM4 10h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10z"/>
+            </svg>
+        </div>
+        <span class="phone-indicator">📱</span>
+    </div>
+
+    <div class="banner-close" (click)="dismissBanner($event)" [title]="isMinimized ? 'Close permanently' : 'Minimize'">
+        <mat-icon>{{ isMinimized ? 'close' : 'remove' }}</mat-icon>
+    </div>
+
+    <!-- Animated background -->
+    <div class="banner-bg">
+        <div class="phone phone-1">📱</div>
+        <div class="phone phone-2">📱</div>
+        <div class="phone phone-3">📱</div>
+    </div>
+</div>
