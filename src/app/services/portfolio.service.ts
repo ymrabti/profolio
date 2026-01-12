@@ -5,6 +5,7 @@ import {
     Skill,
     Project,
     ProfessionalContribution,
+    Education,
     ExternalLink,
     PersonalInfo,
 } from '../models/portfolio.model';
@@ -702,6 +703,23 @@ export class PortfolioService {
                 ],
             },
         ],
+        educations: [
+            {
+                institution: 'École Hassania des travaux publics',
+                degree: "Ingénieur d'État",
+                field: "Science de l'information géographique",
+                period: '09/2016 - 07/2020',
+                location: 'Casablanca',
+                description: 'Engineering degree in Geographic Information Science covering GIS technologies, spatial databases, remote sensing, and geospatial application development.',
+            },
+            {
+                institution: "CPGE - Classes préparatoires aux grandes écoles d'ingénieurs",
+                degree: 'MPSI',
+                field: 'Mathématiques, Physique et Sciences de l\'Ingénieur',
+                period: '09/2014 - 06/2016',
+                description: 'Preparatory classes for engineering schools focusing on mathematics, physics, and engineering sciences.',
+            },
+        ],
         externalLinks: [
             {
                 platform: 'GitHub - Main Profile',
@@ -766,6 +784,10 @@ export class PortfolioService {
 
     getProfessionalContributions(): Observable<ProfessionalContribution[]> {
         return of(this.portfolioData.professionalContributions);
+    }
+
+    getEducations(): Observable<Education[]> {
+        return of(this.portfolioData.educations);
     }
 
     getExternalLinks(): Observable<ExternalLink[]> {

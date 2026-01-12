@@ -19,6 +19,7 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
 import { SkillsSectionComponent } from './components/skills-section/skills-section.component';
 import { ProjectsSectionComponent } from './components/projects-section/projects-section.component';
 import { ExperienceSectionComponent } from './components/experience-section/experience-section.component';
+import { EducationSectionComponent } from './components/education-section/education-section.component';
 import { FooterSectionComponent } from './components/footer-section/footer-section.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { GithubBannerComponent } from './components/github-banner/github-banner.component';
@@ -45,6 +46,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SkillsSectionComponent,
     ProjectsSectionComponent,
     ExperienceSectionComponent,
+    EducationSectionComponent,
     FooterSectionComponent,
     ContactMeComponent,
     GithubBannerComponent,

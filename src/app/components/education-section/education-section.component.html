@@ -1,0 +1,29 @@
+<section id="education" class="education-section">
+  <div class="container">
+    <div class="education-header">
+      <h2 class="section-title">{{ 'education.title' | translate }}</h2>
+      <p class="section-subtitle">{{ 'education.subtitle' | translate }}</p>
+    </div>
+
+    <div class="timeline">
+      <div *ngFor="let education of educations" class="timeline-item">
+        <div class="timeline-marker"></div>
+        
+        <div class="education-card">
+          <div class="card-header">
+            <h3 class="institution-name">{{ education.institution }}</h3>
+            <span class="period">{{ education.period }}</span>
+            <span class="location-badge" *ngIf="education.location">
+              <mat-icon>location_on</mat-icon>
+              {{ education.location }}
+            </span>
+          </div>
+          
+          <h4 class="degree">{{ education.degree }}</h4>
+          <p class="field" *ngIf="education.field">{{ education.field }}</p>
+          <p class="description" *ngIf="education.description">{{ education.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -41,6 +41,15 @@ export interface ProfessionalContribution {
     description: string;
 }
 
+export interface Education {
+    institution: string;
+    degree: string;
+    field?: string;
+    period: string;
+    location?: string;
+    description?: string;
+}
+
 export interface ExternalLink {
     platform: string;
     url: string;
@@ -62,5 +71,6 @@ export interface PortfolioData {
     skills: Skill[];
     projects: Project[];
     professionalContributions: ProfessionalContribution[];
+    educations: Education[];
     externalLinks: ExternalLink[];
 }

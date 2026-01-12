@@ -10,6 +10,7 @@
         "skills": "Skills",
         "projects": "Projects",
         "experience": "Experience",
+        "education": "Education",
         "contact": "Contact"
     },
     "skills": {
@@ -46,6 +47,10 @@
         "subtitle": "Contributing to meaningful projects and organizations",
         "current": "Current Position",
         "responsibilities": "Key Responsibilities"
+    },
+    "education": {
+        "title": "Education",
+        "subtitle": "Academic background and qualifications"
     },
     "contact": {
         "title": "Let's Connect & Work Together!",
