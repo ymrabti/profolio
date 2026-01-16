@@ -121,7 +121,7 @@ export class PortfolioService {
                 category: 'fullstack',
                 liveUrl: 'https://qrchecks.youmrabti.com',
                 status: 'ongoing',
-                imageUrl: '/assets/images/presence-flow.jpg',
+                imageUrl: '/assets/images/presence_flow.webp',
                 features: [
                     {
                         title: 'Backend/Database',
@@ -163,7 +163,7 @@ export class PortfolioService {
                 category: 'fullstack',
                 liveUrl: 'https://healthy.youmrabti.com/',
                 githubUrl: 'https://github.com/ymrabti/apple_health_ng',
-                imageUrl: '/assets/images/apple-health.jpg',
+                imageUrl: '/assets/images/apple_health.webp',
                 status: 'completed',
                 features: [
                     {
@@ -235,7 +235,7 @@ export class PortfolioService {
                     { name: 'JavaScript', icon: 'javascript' },
                     { name: 'XLSX', icon: 'excel' },
                 ],
-                imageUrl: '/assets/images/streetview.jpg',
+                imageUrl: '/assets/images/streetview.webp',
                 liveUrl: 'https://streetview_client.youmrabti.com/',
             }, //https://www.termsfeed.com/live/3ff1cea7-e4b0-4b92-aac1-bb1fdd0fb0c5
             {
@@ -244,7 +244,7 @@ export class PortfolioService {
                 description:
                     'Modern end-to-end encryption chat application supporting group chats and file sharing',
                 category: 'fullstack',
-                imageUrl: '/assets/images/chatup.jpg',
+                imageUrl: '/assets/images/chatup.webp',
                 status: 'ongoing',
                 liveUrl: 'https://chat-up.youmrabti.com/',
                 features: [
@@ -293,7 +293,7 @@ export class PortfolioService {
                     { name: 'TypeScript', icon: 'typescript' },
                     { name: 'PostgreSQL', icon: 'postgresql' },
                 ],
-                imageUrl: '/assets/images/pharmacie-de-garde.jpg',
+                imageUrl: '/assets/images/pharmacie_de_garde.webp',
                 // liveUrl: 'https://pharmacie-de-garde.youmrabti.com/',
             },
             {
@@ -304,7 +304,7 @@ export class PortfolioService {
                 category: 'fullstack',
                 status: 'planned',
                 features: [],
-                imageUrl: '/assets/images/rifq.jpg',
+                imageUrl: '/assets/images/rifq.webp',
                 technologies: [],
             },
 
@@ -315,7 +315,7 @@ export class PortfolioService {
                 description:
                     'Mobile application for football matches, competitions, and results with comprehensive statistics',
                 category: 'mobile',
-                imageUrl: '/assets/images/botola-max.png',
+                imageUrl: '/assets/images/botola_max.webp',
                 status: 'completed',
                 features: [
                     {
@@ -337,7 +337,7 @@ export class PortfolioService {
                 description:
                     'Mobile tool for collection of lux light data with geolocation, handles XLSX exports for analysis',
                 category: 'mobile',
-                imageUrl: '/assets/images/geolightmeter-1.png',
+                imageUrl: '/assets/images/geolightmeter_1.webp',
                 playStoreUrl:
                     'https://play.google.com/store/apps/details?id=com.ymrabtiapps.geoligtmeter',
                 status: 'completed',
@@ -363,7 +363,7 @@ export class PortfolioService {
                     'Pharmacy management mobile application for inventory, sales, and customer management (ongoing)',
                 category: 'mobile',
                 status: 'ongoing',
-                imageUrl: '/assets/images/pharmagest.jpg',
+                imageUrl: '/assets/images/pharmagest.webp',
                 playStoreUrl:
                     'https://play.google.com/store/apps/details?id=com.ymrabtiapps.pharmagest',
                 features: [
@@ -416,7 +416,7 @@ export class PortfolioService {
                 category: 'tool',
                 status: 'completed',
                 githubUrl: 'https://github.com/ymrabti/svg-playground',
-                imageUrl: '/assets/images/svg-playground.png',
+                imageUrl: '/assets/images/svg_playground.webp',
                 liveUrl: 'https://svg-playground.youmrabti.com',
                 features: [
                     {
@@ -441,7 +441,7 @@ export class PortfolioService {
                 status: 'completed',
                 githubUrl:
                     'https://github.com/youmtinetflutterpacks/power_geojson',
-                imageUrl: '/assets/images/power_geojson.jpg',
+                imageUrl: '/assets/images/power_geojson.webp',
                 liveUrl: 'https://pub.dev/packages/power_geojson',
                 features: [
                     {
