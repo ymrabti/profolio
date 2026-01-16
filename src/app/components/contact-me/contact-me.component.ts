@@ -47,7 +47,17 @@ export class ContactMeComponent implements OnInit {
         return 'admin@youmrabti.com';
     }
 
-    downloadCV(): void {
+    printCV(): void {
         this.cvRendererService.renderCV();
+    }
+
+    downloadCV(): void {
+        const cvUrl =
+            'https://drive.google.com/file/d/1CtbHOMAFKwDKRcgt4aaJ3SohUWl1qI76/view';
+        const link = document.createElement('a');
+        link.href = cvUrl;
+        link.target = '_blank';
+        link.download = 'CV.pdf';
+        link.click();
     }
 }

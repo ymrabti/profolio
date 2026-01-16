@@ -198,11 +198,11 @@ export class CvRendererService {
         }
 
         .main-column {
-            flex: 2;
+            flex: 7;
         }
 
         .side-column {
-            flex: 1;
+            flex: 4;
         }
 
         /* Section Styling */
@@ -306,31 +306,53 @@ export class CvRendererService {
         }
 
         /* Skills Section */
-        .skill-category {
-            margin-bottom: 12px;
+        .skills-container {
+            margin-bottom: 8px;
         }
 
-        .skill-category-title {
-            font-size: 9pt;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 5px;
+        .skills-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+            padding-bottom: 6px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 7pt;
+            color: #555;
+        }
+
+        .legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
         }
 
         .skill-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 5px;
+            gap: 4px;
         }
 
         .skill-tag {
-            font-size: 8pt;
-            padding: 3px 8px;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
-            color: #454545;
-            border-radius: 12px;
+            font-size: 7.5pt;
+            padding: 2px 7px;
+            border-radius: 10px;
             font-weight: 500;
+            color: #fff;
         }
+
+        /* Category Colors */
+        .skill-dev, .legend-dev { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .skill-ops, .legend-ops { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+        .skill-database, .legend-database { background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%); }
+        .skill-gis, .legend-gis { background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%); }
+        .skill-ide, .legend-ide { background: linear-gradient(135deg, #434343 0%, #000000 100%); }
 
         /* Education Section */
         .education-item {
@@ -498,38 +520,33 @@ export class CvRendererService {
         const title = lang === 'fr' ? 'Compétences' : 'Skills';
 
         const categoryLabels: Record<string, { en: string; fr: string }> = {
-            dev: { en: 'Development', fr: 'Développement' },
+            dev: { en: 'Dev', fr: 'Dév' },
             ops: { en: 'DevOps', fr: 'DevOps' },
-            database: { en: 'Databases', fr: 'Bases de données' },
-            gis: { en: 'GIS & Mapping', fr: 'SIG & Cartographie' },
-            ide: { en: 'Dev Tools', fr: 'Outils Dev' },
+            database: { en: 'DB', fr: 'BDD' },
+            gis: { en: 'GIS', fr: 'SIG' },
+            ide: { en: 'Tools', fr: 'Outils' },
         };
 
-        const groupedSkills = skills.reduce(
-            (acc, skill) => {
-                if (!acc[skill.category]) acc[skill.category] = [];
-                acc[skill.category].push(skill);
-                return acc;
-            },
-            {} as Record<string, typeof skills>
-        );
-
-        const categories = Object.entries(groupedSkills)
-            .map(([category, categorySkills]) => {
-                const categoryLabel = categoryLabels[category]?.[lang as 'en' | 'fr'] || category;
-                const skillTags = categorySkills.map((s) => `<span class="skill-tag">${s.name}</span>`).join('');
-                return `
-                <div class="skill-category">
-                    <div class="skill-category-title">${categoryLabel}</div>
-                    <div class="skill-list">${skillTags}</div>
-                </div>`;
+        // Generate legend items
+        const legendItems = Object.entries(categoryLabels)
+            .map(([category, labels]) => {
+                const label = labels[lang as 'en' | 'fr'] || category;
+                return `<span class="legend-item"><span class="legend-dot legend-${category}"></span>${label}</span>`;
             })
+            .join('');
+
+        // Generate all skill tags with category colors
+        const skillTags = skills
+            .map((s) => `<span class="skill-tag skill-${s.category}">${s.name}</span>`)
             .join('');
 
         return `
         <section class="section">
             <h2 class="section-title">${title}</h2>
-            ${categories}
+            <div class="skills-container">
+                <div class="skills-legend">${legendItems}</div>
+                <div class="skill-list">${skillTags}</div>
+            </div>
         </section>`;
     }
 
