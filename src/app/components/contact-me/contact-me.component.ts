@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { PortfolioService } from '../../services/portfolio.service';
+import { CvRendererService } from '../../services/cv-renderer.service';
 import { ExternalLink } from '../../models/portfolio.model';
 
 @Component({
@@ -12,6 +13,7 @@ export class ContactMeComponent implements OnInit {
     externalLinks: ExternalLink[] = [];
     constructor(
         private portfolioService: PortfolioService,
+        private cvRendererService: CvRendererService,
         public translate: TranslateService
     ) {}
 
@@ -46,13 +48,6 @@ export class ContactMeComponent implements OnInit {
     }
 
     downloadCV(): void {
-        // Replace with actual CV file path
-        const cvUrl =
-            'https://drive.google.com/file/d/1CtbHOMAFKwDKRcgt4aaJ3SohUWl1qI76/view';
-        const link = document.createElement('a');
-        link.href = cvUrl;
-        link.target = '_blank';
-        link.download = 'CV.pdf';
-        link.click();
+        this.cvRendererService.renderCV();
     }
 }
