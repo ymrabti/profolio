@@ -55,7 +55,7 @@ export class CvRendererService {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - ${data.personalInfo.name}</title>
+    <title>Rendered CV - ${data.personalInfo.name}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         ${this.getCVStyles()}
@@ -435,7 +435,7 @@ export class CvRendererService {
         const info = this.portfolioData!.personalInfo;
         return `
         <header class="cv-header">
-            <img src="${info.avatarUrl}" alt="${info.name}" class="profile-image" crossorigin="anonymous">
+            <img src="/assets/images/avatar.webp" alt="${info.name}" class="profile-image" crossorigin="anonymous">
             <div class="header-info">
                 <h1 class="name">${info.name}</h1>
                 <p class="tagline">${info.tagline}</p>
@@ -484,7 +484,7 @@ export class CvRendererService {
     }
 
     private generateProjects(): string {
-        const projects = this.portfolioData!.projects.slice(0, 6); // Top 6 projects
+        const projects = this.portfolioData!.projects.filter((proj) => ['chatup', 'qr-checks', 'apple-health', 'streetview-xeno', 'svg-playground'].includes(proj.id)).sort((a, b) => b.status.localeCompare(a.status));
         const lang = this.translate.currentLang || 'en';
         const title = lang === 'fr' ? 'Projets Phares' : 'Featured Projects';
 

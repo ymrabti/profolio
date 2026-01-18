@@ -616,11 +616,11 @@ export class PortfolioService {
         ],
         professionalContributions: [
             {
-                company: 'Marafik/Majal Berkane',
-                role: 'Full Stack Developer & GIS Specialist',
-                period: '2020 - Present',
+                company: 'Majal Berkane',
+                role: 'Mobile Developer & GIS Specialist',
+                period: '01/2023 - Present',
                 description:
-                    'Designed and delivered dynamic geospatial solutions, including real-time map generation, statistical analysis, and distance measurement. \nManaged the full data lifecycle—collection, conversion, cleaning, processing, analysis, and interoperability—using advanced GIS workflows. \nLed ArcGIS Online data collection initiatives and developed interactive dashboards to support urban development projects and enhance digital citizen services through innovative, data-driven solutions.',
+                    'IT & GIS Manager overseeing end-to-end geospatial solutions, including real-time mapping, spatial analysis, and dashboards. Led the full GIS data lifecycle and ArcGIS Online initiatives to deliver data-driven insights supporting urban development and digital citizen services.',
                 projects: [
                     {
                         id: 'find-tobissi',
@@ -701,6 +701,14 @@ export class PortfolioService {
                         technologies: [],
                     },
                 ],
+            },
+            {
+                company: 'Marafik Berkane',
+                role: 'GIS Specialist',
+                period: '06/2021 - 12/2022',
+                description:
+                    'Designed and delivered dynamic GIS solutions—real-time maps, spatial analysis, and distance measurement. Managed the full geospatial data lifecycle and led ArcGIS Online initiatives, creating interactive dashboards to drive urban development and digital citizen services.',
+                projects: [],
             },
         ],
         educations: [
