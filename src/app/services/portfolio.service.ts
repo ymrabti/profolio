@@ -114,48 +114,6 @@ export class PortfolioService {
         projects: [
             // FullStack Platforms
             {
-                id: 'qr-checks',
-                title: 'Presence flow with QR Codes',
-                description:
-                    'Platform for check-in presence/leave of employees, students, business staff, stores via short temporary QR codes shown dynamically',
-                category: 'fullstack',
-                liveUrl: 'https://qrchecks.youmrabti.com',
-                status: 'ongoing',
-                imageUrl: '/assets/images/presence_flow.webp',
-                features: [
-                    {
-                        title: 'Backend/Database',
-                        description:
-                            'Real-time QR code management and validation system',
-                        technologies: [
-                            { name: 'Node.js', icon: 'nodejs' },
-                            { name: 'Express', icon: 'express' },
-                            { name: 'MySQL', icon: 'mysql' },
-                            { name: 'Socket.io', icon: 'socketio' },
-                        ],
-                    },
-                    {
-                        title: 'Mobile App',
-                        description:
-                            'Two user types: Gates show QR codes, users scan QR codes',
-                        technologies: [
-                            { name: 'Dart', icon: 'dart' },
-                            { name: 'Flutter', icon: 'flutter' },
-                        ],
-                    },
-                    {
-                        title: 'Backoffice',
-                        description:
-                            'Statistics, configurations, absence justification/confirming, reporting',
-                        technologies: [
-                            { name: 'TypeScript', icon: 'typescript' },
-                            { name: 'Angular', icon: 'angular' },
-                        ],
-                    },
-                ],
-                technologies: [],
-            },
-            {
                 id: 'apple-health',
                 title: 'AppleHealth',
                 description:
@@ -163,7 +121,7 @@ export class PortfolioService {
                 category: 'fullstack',
                 liveUrl: 'https://healthy.youmrabti.com/',
                 githubUrl: 'https://github.com/ymrabti/apple_health_ng',
-                imageUrl: '/assets/images/apple_health.webp',
+                imageUrl: '/assets/images/full-stack/apple_health.webp',
                 status: 'completed',
                 features: [
                     {
@@ -235,8 +193,50 @@ export class PortfolioService {
                     { name: 'JavaScript', icon: 'javascript' },
                     { name: 'XLSX', icon: 'excel' },
                 ],
-                imageUrl: '/assets/images/streetview.webp',
+                imageUrl: '/assets/images/full-stack/streetview.webp',
                 liveUrl: 'https://streetview_client.youmrabti.com/',
+            },
+            {
+                id: 'qr-checks',
+                title: 'Presence flow with QR Codes',
+                description:
+                    'Platform for check-in presence/leave of employees, students, business staff, stores via short temporary QR codes shown dynamically',
+                category: 'fullstack',
+                liveUrl: 'https://qrchecks.youmrabti.com',
+                status: 'ongoing',
+                imageUrl: '/assets/images/full-stack/presence_flow.webp',
+                features: [
+                    {
+                        title: 'Backend/Database',
+                        description:
+                            'Real-time QR code management and validation system',
+                        technologies: [
+                            { name: 'Node.js', icon: 'nodejs' },
+                            { name: 'Express', icon: 'express' },
+                            { name: 'MySQL', icon: 'mysql' },
+                            { name: 'Socket.io', icon: 'socketio' },
+                        ],
+                    },
+                    {
+                        title: 'Mobile App',
+                        description:
+                            'Two user types: Gates show QR codes, users scan QR codes',
+                        technologies: [
+                            { name: 'Dart', icon: 'dart' },
+                            { name: 'Flutter', icon: 'flutter' },
+                        ],
+                    },
+                    {
+                        title: 'Backoffice',
+                        description:
+                            'Statistics, configurations, absence justification/confirming, reporting',
+                        technologies: [
+                            { name: 'TypeScript', icon: 'typescript' },
+                            { name: 'Angular', icon: 'angular' },
+                        ],
+                    },
+                ],
+                technologies: [],
             }, //https://www.termsfeed.com/live/3ff1cea7-e4b0-4b92-aac1-bb1fdd0fb0c5
             {
                 id: 'chatup',
@@ -244,7 +244,7 @@ export class PortfolioService {
                 description:
                     'Modern end-to-end encryption chat application supporting group chats and file sharing',
                 category: 'fullstack',
-                imageUrl: '/assets/images/chatup.webp',
+                imageUrl: '/assets/images/full-stack/chatup.webp',
                 status: 'ongoing',
                 liveUrl: 'https://chat-up.youmrabti.com/',
                 features: [
@@ -286,27 +286,27 @@ export class PortfolioService {
                 description:
                     'Web platform for locating on-duty pharmacies in Morocco with geolocation and search features',
                 category: 'fullstack',
-                status: 'ongoing',
+                status: 'planned',
                 features: [],
                 technologies: [
                     { name: 'Next.js', icon: 'nextjs' },
                     { name: 'TypeScript', icon: 'typescript' },
                     { name: 'PostgreSQL', icon: 'postgresql' },
                 ],
-                imageUrl: '/assets/images/pharmacie_de_garde.webp',
+                imageUrl: '/assets/images/full-stack/pharmacie_de_garde.webp',
                 // liveUrl: 'https://pharmacie-de-garde.youmrabti.com/',
             },
-            {
-                id: 'rifq',
-                title: 'RIFQ',
-                description:
-                    'RIFQ is a national digital platform for the identification, monitoring, and humane management of domestic and stray animals, supporting public health, animal welfare, and data-driven territorial governance.',
-                category: 'fullstack',
-                status: 'planned',
-                features: [],
-                imageUrl: '/assets/images/rifq.webp',
-                technologies: [],
-            },
+            // {
+            //     id: 'rifq',
+            //     title: 'RIFQ',
+            //     description:
+            //         'RIFQ is a national digital platform for the identification, monitoring, and humane management of domestic and stray animals, supporting public health, animal welfare, and data-driven territorial governance.',
+            //     category: 'fullstack',
+            //     status: 'planned',
+            //     features: [],
+            //     imageUrl: '/assets/images/full-stack/rifq.webp',
+            //     technologies: [],
+            // },
 
             // Mobile Apps
             {
@@ -315,7 +315,7 @@ export class PortfolioService {
                 description:
                     'Mobile application for football matches, competitions, and results with comprehensive statistics',
                 category: 'mobile',
-                imageUrl: '/assets/images/botola_max.webp',
+                imageUrl: '/assets/images/mobile/botola_max.webp',
                 status: 'completed',
                 features: [
                     {
@@ -332,12 +332,12 @@ export class PortfolioService {
                 technologies: [],
             },
             {
-                id: 'geolight-meter',
-                title: 'Geolight Meter',
+                id: 'luxmap',
+                title: 'LuxMap',
                 description:
                     'Mobile tool for collection of lux light data with geolocation, handles XLSX exports for analysis',
                 category: 'mobile',
-                imageUrl: '/assets/images/geolightmeter_1.webp',
+                imageUrl: '/assets/images/mobile/luxmap.webp',
                 playStoreUrl:
                     'https://play.google.com/store/apps/details?id=com.ymrabtiapps.geoligtmeter',
                 status: 'completed',
@@ -357,23 +357,23 @@ export class PortfolioService {
                 technologies: [],
             },
             {
-                id: 'pharmagest',
-                title: 'Pharmagest',
+                id: 'thumbhub',
+                title: 'ThumbHub',
                 description:
-                    'Pharmacy management mobile application for inventory, sales, and customer management (ongoing)',
+                    'A Flutter app for fetching, previewing, and downloading YouTube video thumbnails in multiple resolutions.',
                 category: 'mobile',
                 status: 'ongoing',
-                imageUrl: '/assets/images/pharmagest.webp',
+                imageUrl: '/assets/images/mobile/thumbhub.webp',
                 playStoreUrl:
-                    'https://play.google.com/store/apps/details?id=com.ymrabtiapps.pharmagest',
+                    'https://play.google.com/store/apps/details?id=com.ymrabtiapps.thumbnails.thumbnail_youtube',
                 features: [
                     {
-                        title: 'Pharmacy Management',
+                        title: 'YouTube Thumbnails',
                         description:
-                            'Complete pharmacy operations and inventory management',
+                            'Fetch, preview, and download YouTube video thumbnails in multiple resolutions',
                         technologies: [
                             { name: 'Flutter', icon: 'flutter' },
-                            { name: 'Database Management', icon: 'database' },
+                            { name: 'Firebase', icon: 'database' },
                             { name: 'Business Logic', icon: 'business' },
                         ],
                     },
@@ -384,54 +384,6 @@ export class PortfolioService {
                 ],
             },
 
-            // Online/Dev Tools
-            {
-                id: 'portfolio-website',
-                title: 'Portfolio Website',
-                description:
-                    'This stunning Angular portfolio showcasing skills, projects, and professional experience',
-                category: 'tool',
-                status: 'completed',
-                imageUrl: 'https://avatars.githubusercontent.com/ymrabti',
-                liveUrl: 'https://youmrabti.com',
-                features: [
-                    {
-                        title: 'Modern Portfolio',
-                        description:
-                            'Comprehensive showcase of expertise and experience',
-                        technologies: [
-                            { name: 'Angular', icon: 'angular' },
-                            { name: 'TypeScript', icon: 'typescript' },
-                            { name: 'GSAP Animations', icon: 'animation' },
-                        ],
-                    },
-                ],
-                technologies: [],
-            },
-            {
-                id: 'svg-playground',
-                title: 'SVG Playground',
-                description:
-                    'Create stunning SVG graphics with free online generator. Design polygons, stars, spirals, and curved shapes with real-time preview. Export as SVG or PNG.',
-                category: 'tool',
-                status: 'completed',
-                githubUrl: 'https://github.com/ymrabti/svg-playground',
-                imageUrl: '/assets/images/svg_playground.webp',
-                liveUrl: 'https://svg-playground.youmrabti.com',
-                features: [
-                    {
-                        title: 'SVG Creation Tool',
-                        description:
-                            'Real-time SVG generation with multiple shape types',
-                        technologies: [
-                            { name: 'JavaScript', icon: 'javascript' },
-                            { name: 'SVG', icon: 'svg' },
-                            { name: 'Canvas', icon: 'canvas' },
-                        ],
-                    },
-                ],
-                technologies: [],
-            },
             {
                 id: 'power-geojson',
                 title: 'PowerGeoJSON',
@@ -441,7 +393,7 @@ export class PortfolioService {
                 status: 'completed',
                 githubUrl:
                     'https://github.com/youmtinetflutterpacks/power_geojson',
-                imageUrl: '/assets/images/power_geojson.webp',
+                imageUrl: '/assets/images/tools/power_geojson.webp',
                 liveUrl: 'https://pub.dev/packages/power_geojson',
                 features: [
                     {
@@ -465,6 +417,7 @@ export class PortfolioService {
                     'Flutter Compass Tools Implementation measuring azimuth angle between magnetic north and device orientation',
                 category: 'tool',
                 status: 'completed',
+                imageUrl: '/assets/images/tools/flutter_azimuth.webp',
                 githubUrl:
                     'https://github.com/youmtinetflutterpacks/flutter_azimuth',
                 liveUrl: 'https://pub.dev/packages/flutter_azimuth',
@@ -485,6 +438,7 @@ export class PortfolioService {
             {
                 id: 'popup-menu-2',
                 title: 'Popup Menu 2',
+                imageUrl: '/assets/images/tools/popup_menu_2.webp',
                 description:
                     'Popup menu with clickable buttons and global click function to maintain user attention without breaking focus',
                 category: 'tool',
@@ -516,7 +470,9 @@ export class PortfolioService {
                     'Online tool for converting JSON data structures to Dart model classes automatically',
                 category: 'tool',
                 status: 'completed',
+                liveUrl: 'https://open-vsx.org/extension/YOUMTINET/dartifyjson',
                 githubUrl: 'https://github.com/ymrabti/vscode-dartify',
+                imageUrl: '/assets/images/tools/dartify.webp',
                 features: [
                     {
                         title: 'Code Generation Tool',
@@ -541,6 +497,8 @@ export class PortfolioService {
                 description:
                     'Convert 360° images to multiresolution format with XLSX generator for StreetViewXeno integration',
                 category: 'tool',
+                imageUrl: '/assets/images/tools/krpanos-tool.webp',
+                liveUrl: 'https://www.npmjs.com/package/krpanos-tools',
                 status: 'completed',
                 features: [
                     {
@@ -551,63 +509,6 @@ export class PortfolioService {
                             { name: 'Image Processing', icon: 'image' },
                             { name: 'XLSX Generation', icon: 'excel' },
                             { name: 'Krpano Integration', icon: 'integration' },
-                        ],
-                    },
-                ],
-                technologies: [],
-            },
-            {
-                id: 'soil-moisture-fetcher',
-                title: 'Soil Moisture Fetcher',
-                description:
-                    'Automated soil moisture monitoring system using satellite remote sensing data from Sentinel-1 and NASA SMAP for precision agriculture',
-                category: 'tool',
-                status: 'completed',
-                githubUrl: 'https://github.com/ymrabti/soil-moisture-fetcher',
-                features: [
-                    {
-                        title: 'Satellite Data Processing',
-                        description:
-                            'Daily imagery retrieval, moisture maps generation, GeoTIFF/JPEG exports',
-                        technologies: [
-                            { name: 'Python', icon: 'python' },
-                            {
-                                name: 'Google Earth Engine',
-                                icon: 'earth-engine',
-                            },
-                            { name: 'Docker', icon: 'docker' },
-                            { name: 'PostgreSQL', icon: 'postgresql' },
-                        ],
-                    },
-                    {
-                        title: 'Automated Monitoring',
-                        description:
-                            'Real-time tracking with notifications for smart irrigation and environmental research',
-                        technologies: [
-                            { name: 'Sentinel-1', icon: 'satellite' },
-                            { name: 'NASA SMAP', icon: 'satellite' },
-                            { name: 'Automation', icon: 'automation' },
-                        ],
-                    },
-                ],
-                technologies: [],
-            },
-            {
-                id: 'pc-cleaner',
-                title: 'Automatic PC Cleaner',
-                description:
-                    'Automated Windows system maintenance script running weekly to clean temp files, clear caches, empty Recycle Bin, and optimize disk space',
-                category: 'tool',
-                status: 'completed',
-                features: [
-                    {
-                        title: 'System Maintenance',
-                        description:
-                            'Hands-free system optimization with automated logging and email reporting',
-                        technologies: [
-                            { name: 'PowerShell', icon: 'powershell' },
-                            { name: 'Task Scheduler', icon: 'windows' },
-                            { name: 'Email Automation', icon: 'email' },
                         ],
                     },
                 ],
@@ -718,15 +619,18 @@ export class PortfolioService {
                 field: "Science de l'information géographique",
                 period: '09/2016 - 07/2020',
                 location: 'Casablanca',
-                description: 'Engineering degree in Geographic Information Science covering GIS technologies, spatial databases, remote sensing, and geospatial application development.',
+                description:
+                    'Engineering degree in Geographic Information Science covering GIS technologies, spatial databases, remote sensing, and geospatial application development.',
             },
             {
-                institution: "CPGE - Classes préparatoires aux grandes écoles d'ingénieurs",
+                institution:
+                    "CPGE - Classes préparatoires aux grandes écoles d'ingénieurs",
                 degree: 'MPSI',
-                field: 'Mathématiques, Physique et Sciences de l\'Ingénieur',
+                field: "Mathématiques, Physique et Sciences de l'Ingénieur",
                 period: '09/2014 - 06/2016',
                 location: 'Meknès',
-                description: 'Preparatory classes for engineering schools focusing on mathematics, physics, and engineering sciences.',
+                description:
+                    'Preparatory classes for engineering schools focusing on mathematics, physics, and engineering sciences.',
             },
             {
                 institution: 'Lycée Lalla Salma',
@@ -734,7 +638,8 @@ export class PortfolioService {
                 field: 'Sciences Mathématiques',
                 period: '2014',
                 location: 'Rissani',
-                description: 'High school diploma with focus on mathematics and sciences.',
+                description:
+                    'High school diploma with focus on mathematics and sciences.',
             },
         ],
         externalLinks: [
@@ -793,7 +698,7 @@ export class PortfolioService {
         let projects = this.portfolioData.projects;
         if (category) {
             projects = projects.filter(
-                (project) => project.category === category
+                (project) => project.category === category,
             );
         }
         return of(projects);
