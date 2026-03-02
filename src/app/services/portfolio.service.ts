@@ -607,8 +607,10 @@ export class PortfolioService {
                 company: 'Marafik Berkane',
                 role: 'GIS Specialist',
                 period: '06/2021 - 12/2022',
-                description:
-                    'Designed and delivered dynamic GIS solutions—real-time maps, spatial analysis, and distance measurement. Managed the full geospatial data lifecycle and led ArcGIS Online initiatives, creating interactive dashboards to drive urban development and digital citizen services.',
+                description: `As a GIS Engineer at Marafik Berkane, I architected and delivered high-impact geospatial solutions, including real-time mapping systems, advanced spatial analytics, and precision distance measurement tools. I oversaw the full geospatial data lifecycle—from acquisition and modeling to governance and optimization—while leading ArcGIS Online initiatives and developing interactive dashboards to enhance operational visibility and decision-making.
+
+
+My scope covered critical public services such as public transport networks, household waste management, green spaces and urban forestry (palms and trees), slaughterhouses, and their associated supply chains, ensuring data-driven governance and service performance optimization.`,
                 projects: [],
             },
         ],
