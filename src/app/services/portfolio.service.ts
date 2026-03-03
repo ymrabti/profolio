@@ -197,7 +197,7 @@ export class PortfolioService {
                 liveUrl: 'https://streetview_client.youmrabti.com/',
             },
             {
-                id: 'qr-checks',
+                id: 'presence-flow',
                 title: 'Presence flow with QR Codes',
                 description:
                     'Platform for check-in presence/leave of employees, students, business staff, stores via short temporary QR codes shown dynamically',
@@ -492,7 +492,7 @@ export class PortfolioService {
                 ],
             },
             {
-                id: 'image-360-converter',
+                id: 'krpanos-tool',
                 title: 'Image 360° Converter',
                 description:
                     'Convert 360° images to multiresolution format with XLSX generator for StreetViewXeno integration',

@@ -11,7 +11,7 @@ export class CvRendererService {
 
     constructor(
         private portfolioService: PortfolioService,
-        private translate: TranslateService
+        private translate: TranslateService,
     ) {
         this.portfolioService.getPortfolioData().subscribe((data) => {
             this.portfolioData = data;
@@ -457,8 +457,11 @@ export class CvRendererService {
 
     private generateExperience(): string {
         const contributions = this.portfolioData!.professionalContributions;
-        const lang = this.translate.currentLang || 'en';
-        const title = lang === 'fr' ? 'Expérience Professionnelle' : 'Professional Experience';
+        const lang = this.translate.getCurrentLang() || 'en';
+        const title =
+            lang === 'fr'
+                ? 'Expérience Professionnelle'
+                : 'Professional Experience';
 
         const items = contributions
             .map(
@@ -472,7 +475,7 @@ export class CvRendererService {
                     <span class="period">${exp.period}</span>
                 </div>
                 <p class="experience-description">${exp.description.replace(/\n/g, '<br>')}</p>
-            </div>`
+            </div>`,
             )
             .join('');
 
@@ -484,8 +487,16 @@ export class CvRendererService {
     }
 
     private generateProjects(): string {
-        const projects = this.portfolioData!.projects.filter((proj) => ['chatup', 'qr-checks', 'apple-health', 'streetview-xeno', 'svg-playground'].includes(proj.id)).sort((a, b) => b.status.localeCompare(a.status));
-        const lang = this.translate.currentLang || 'en';
+        const projects = this.portfolioData!.projects.filter((proj) =>
+            [
+                'chatup',
+                'presence-flow',
+                'apple-health',
+                'streetview-xeno',
+                'krpanos-tool',
+            ].includes(proj.id),
+        ).sort((a, b) => b.status.localeCompare(a.status));
+        const lang = this.translate.getCurrentLang() || 'en';
         const title = lang === 'fr' ? 'Projets Phares' : 'Featured Projects';
 
         const statusLabels: Record<string, { en: string; fr: string }> = {
@@ -496,7 +507,9 @@ export class CvRendererService {
 
         const items = projects
             .map((proj) => {
-                const statusLabel = statusLabels[proj.status]?.[lang as 'en' | 'fr'] || proj.status;
+                const statusLabel =
+                    statusLabels[proj.status]?.[lang as 'en' | 'fr'] ||
+                    proj.status;
                 const statusClass = `status-${proj.status}`;
                 return `
             <div class="project-item">
@@ -516,7 +529,7 @@ export class CvRendererService {
 
     private generateSkills(): string {
         const skills = this.portfolioData!.skills;
-        const lang = this.translate.currentLang || 'en';
+        const lang = this.translate.getCurrentLang() || 'en';
         const title = lang === 'fr' ? 'Compétences' : 'Skills';
 
         const categoryLabels: Record<string, { en: string; fr: string }> = {
@@ -537,7 +550,10 @@ export class CvRendererService {
 
         // Generate all skill tags with category colors
         const skillTags = skills
-            .map((s) => `<span class="skill-tag skill-${s.category}">${s.name}</span>`)
+            .map(
+                (s) =>
+                    `<span class="skill-tag skill-${s.category}">${s.name}</span>`,
+            )
             .join('');
 
         return `
@@ -552,7 +568,7 @@ export class CvRendererService {
 
     private generateEducation(): string {
         const educations = this.portfolioData!.educations;
-        const lang = this.translate.currentLang || 'en';
+        const lang = this.translate.getCurrentLang() || 'en';
         const title = lang === 'fr' ? 'Formation' : 'Education';
 
         const items = educations
@@ -563,7 +579,7 @@ export class CvRendererService {
                 <div class="education-institution">${edu.institution}</div>
                 ${edu.field ? `<div class="education-field">${edu.field}</div>` : ''}
                 <div class="education-period">${edu.period}${edu.location ? ` • ${edu.location}` : ''}</div>
-            </div>`
+            </div>`,
             )
             .join('');
 
@@ -576,7 +592,7 @@ export class CvRendererService {
 
     private generateLinks(): string {
         const links = this.portfolioData!.externalLinks.slice(0, 4);
-        const lang = this.translate.currentLang || 'en';
+        const lang = this.translate.getCurrentLang() || 'en';
         const title = lang === 'fr' ? 'Liens' : 'Links';
 
         const items = links
@@ -585,7 +601,7 @@ export class CvRendererService {
             <div class="link-item">
                 <span class="link-platform">${link.platform}:</span>
                 <a href="${link.url}" target="_blank">${link.url.replace(/^https?:\/\//, '')}</a>
-            </div>`
+            </div>`,
             )
             .join('');
 
