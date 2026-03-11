@@ -3,13 +3,13 @@ name: Deploy to Cloudflare Pages
 on:
     push:
         tags:
-            - 'v[0-9]+.[0-9]+.[0-9]+' # Match version tags like v1.0.0
+            - "v[0-9]+.[0-9]+.[0-9]+" # Match version tags like v1.0.0
     workflow_dispatch: # Allow manual trigger
 
 jobs:
     deploy:
         permissions:
-            contents: write # Allow the workflow to create releases    
+            contents: write # Allow the workflow to create releases
         runs-on: ubuntu-latest
 
         steps:
@@ -19,7 +19,7 @@ jobs:
             - name: Install Node.js
               uses: actions/setup-node@v3
               with:
-                  node-version: '24' # Use Node.js 24
+                  node-version: "24" # Use Node.js 24
 
             - name: Install dependencies
               run: npm install
@@ -43,4 +43,5 @@ jobs:
               with:
                   apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
                   accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  projectName: 'pro-folio' # Replace with your Cloudflare Pages project name
+                  projectName: "youmtinet-landing-page"
+                  directory: "./dist/pro-folio/browser"
