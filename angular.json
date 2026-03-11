@@ -64,6 +64,11 @@
                                 "input": "src/assets",
                                 "output": "/assets/"
                             },
+                            {
+                                "glob": "app-ads.txt",
+                                "input": "src/assets",
+                                "output": "/"
+                            },
                             "src/robots.txt",
                             "src/sitemap.xml",
                             "src/manifest.json"
