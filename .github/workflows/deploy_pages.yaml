@@ -43,5 +43,4 @@ jobs:
               with:
                   apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
                   accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  workingDirectory: "./dist/pro-folio/browser"
-                  projectName: "youmtinet-landing-page"
+                  command: pages deploy ./dist/pro-folio/browser --project-name=youmtinet-landing-page
