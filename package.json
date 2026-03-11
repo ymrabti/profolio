@@ -1,6 +1,6 @@
 {
     "name": "younes-mrabti-portfolio",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Professional portfolio showcasing Younes MRABTI's expertise in Full Stack Development, GIS Solutions, and Mobile Applications. Built with Angular 18, featuring modern animations and multilingual support.",
     "main": "src/main.ts",
     "author": {

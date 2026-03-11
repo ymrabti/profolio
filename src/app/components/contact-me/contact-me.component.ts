@@ -53,7 +53,7 @@ export class ContactMeComponent implements OnInit {
 
     downloadCV(): void {
         const cvUrl =
-            'https://drive.google.com/file/d/1CtbHOMAFKwDKRcgt4aaJ3SohUWl1qI76/view';
+            'https://drive.google.com/file/d/1OvsMCcpRqmMQrc9tXK-UhiorbgqTqZca/view?usp=sharing';
         const link = document.createElement('a');
         link.href = cvUrl;
         link.target = '_blank';
