@@ -7,8 +7,8 @@
         "**/Thumbs.db": true,
         "**/node_modules": true,
         "**/dist": true,
-        "**/.wrangler": true,
-        "wrangler.toml": true,
+        "**/.wrangler": false,
+        "wrangler.toml": false,
         ".angular": true,
         ".vscode": true
     }
