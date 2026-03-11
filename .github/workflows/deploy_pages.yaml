@@ -22,10 +22,10 @@ jobs:
                   node-version: "24" # Use Node.js 24
 
             - name: Install dependencies
-              run: npm install
+              run: yarn install
 
             - name: Build the project
-              run: npm run build
+              run: yarn build
 
             - name: Create a release
               id: create_release
