@@ -1,0 +1,46 @@
+name: Deploy to Cloudflare Pages
+
+on:
+    push:
+        tags:
+            - 'v[0-9]+.[0-9]+.[0-9]+' # Match version tags like v1.0.0
+    workflow_dispatch: # Allow manual trigger
+
+jobs:
+    deploy:
+        permissions:
+            contents: write # Allow the workflow to create releases    
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Install Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '24' # Use Node.js 24
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Build the project
+              run: npm run build
+
+            - name: Create a release
+              id: create_release
+              uses: actions/create-release@v1
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  tag_name: ${{ github.ref }} # Use the tag that triggered the workflow
+                  release_name: Release ${{ github.ref }}
+                  draft: false
+                  prerelease: false
+
+            - name: Deploy to Cloudflare Pages
+              uses: cloudflare/wrangler-action@v1
+              with:
+                  apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                  accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+                  projectName: 'pro-folio' # Replace with your Cloudflare Pages project name
