@@ -25,7 +25,7 @@ export class SeoService {
     description: 'Full Stack Developer & GIS Specialist with expertise in modern web technologies, mobile development, and geospatial solutions. Passionate about creating innovative platforms and contributing to the developer community.',
     keywords: 'full stack developer, GIS specialist, web development, mobile development, Angular, React, Node.js, TypeScript, JavaScript, Python, geospatial solutions, software engineer, frontend developer, backend developer',
     author: 'Younes MRABTI',
-    image: 'https://www.youmti.net/assets/images/profile-og.jpg',
+    image: 'https://www.youmti.net/assets/images/avatar.webp',
     url: 'https://www.youmti.net',
     type: 'website',
     siteName: 'Younes MRABTI Portfolio',

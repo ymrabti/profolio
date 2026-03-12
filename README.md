@@ -35,7 +35,7 @@ A modern, responsive portfolio website built with Angular showcasing full-stack 
 
 ### Search Engine Optimization
 - **robots.txt**: Proper search engine crawling guidelines
-- **sitemap.xml**: Complete site structure for indexing
+- **sitemap_index.xml**: Complete site structure for indexing
 - **Structured Data**: Person schema markup for rich snippets
 - **Semantic HTML**: Proper heading hierarchy and semantic elements
 
@@ -69,7 +69,7 @@ The build artifacts will be stored in the `dist/` directory.
 curl http://localhost:4200/robots.txt
 
 # Check sitemap
-curl http://localhost:4200/sitemap.xml
+curl http://localhost:4200/sitemap_index.xml
 
 # Validate structured data
 # Use Google's Rich Results Test or Schema Markup Validator
@@ -98,7 +98,7 @@ src/
 │   ├── icons/                   # PWA icons
 │   └── documents/               # CV and documents
 ├── robots.txt                   # Search engine guidelines
-├── sitemap.xml                  # Site structure
+├── sitemap_index.xml                  # Site structure
 └── manifest.json               # PWA manifest
 ```
 

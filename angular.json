@@ -70,7 +70,7 @@
                                 "output": "/"
                             },
                             "src/robots.txt",
-                            "src/sitemap.xml",
+                            "src/sitemap_index.xml",
                             "src/manifest.json"
                         ],
                         "styles": [
