@@ -11,7 +11,6 @@ import { gsap } from 'gsap';
 })
 export class HeroSectionComponent implements OnInit, AfterViewInit {
     personalInfo: PersonalInfo | null = null;
-    currentLanguage = 'en';
 
     constructor(
         private portfolioService: PortfolioService,
@@ -90,11 +89,6 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
                 },
                 '-=0.2'
             );
-    }
-
-    toggleLanguage(): void {
-        this.currentLanguage = this.currentLanguage === 'en' ? 'fr' : 'en';
-        this.translate.use(this.currentLanguage);
     }
 
     scrollToSection(sectionId: string): void {

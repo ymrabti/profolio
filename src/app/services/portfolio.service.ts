@@ -20,7 +20,8 @@ export class PortfolioService {
             tagline: 'Serving the code community',
             description:
                 'Full Stack Developer & GIS Specialist with expertise in modern web technologies, mobile development, and geospatial solutions. Passionate about creating innovative platforms and contributing to the developer community.',
-            avatarUrl: 'https://avatars.githubusercontent.com/ymrabti',
+            // avatarUrl: 'https://avatars.githubusercontent.com/ymrabti',
+            avatarUrl: 'assets/images/avatar.webp',
             location: 'Morocco',
             email: 'admin@youmrabti.com',
         },

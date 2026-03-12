@@ -9,13 +9,6 @@
         <div class="bg-shape shape-3"></div>
     </div>
     <div class="hero-content">
-        <div class="language-toggle">
-            <button mat-icon-button (click)="toggleLanguage()" class="lang-button">
-                <mat-icon>language</mat-icon>
-                <span>{{ currentLanguage.toUpperCase() }}</span>
-            </button>
-        </div>
-
         <div class="hero-main">
             <div class="hero-avatar">
                 <img [src]="personalInfo?.avatarUrl || '/assets/images/default-avatar.jpg'" [alt]="personalInfo?.name" class="avatar-image">
